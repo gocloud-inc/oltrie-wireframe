@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover your dream home with Oltrie - the premier real estate brand committed to providing top-notch service and expertise. Find luxury properties at affordable prices today.">
-    <title>Oltrie - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
+    <title>Buy - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/src/img/favicon.svg" type="image/x-icon">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/src/sass/app.scss">
 </head>
 <body>
-    <header class="header">
+    <header class="header-inner">
         <div class="container">
             <nav class="nav">
                 <button type="button" class="button button-light rounded-circle-sm" id="nav-button-toggler">
@@ -36,7 +36,7 @@
                 </a>
                 <ul class="nav-menu">  
                     <li class="nav-item">
-                        <a href="buy.html" class="nav-link">Buy</a>
+                        <a href="buy.html" class="nav-link active">Buy</a>
                     </li>
                     <li class="nav-item">
                         <a href="rent.html" class="nav-link">Rent</a>
@@ -75,37 +75,48 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero-section" style="background-image: url('/src/img/hero/hero-banner.png');">
+    <main>        
+        <section class="section">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Easy way to find a perfect property</h1>
-                    <p class="hero-text">We provide a complete service for the sale, purchase or rental of real estate.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <div class="container">
-                <form action="" class="property-wrapper">
+                <div class="section-title">Real Estate & Homes For Sale</div>
+                <form action="" class="property-filter py-1">
                     <div class="property-search">
-                        <input type="search" class="form-control property-search-control" placeholder="Enter an address, neighborhood, city, or zipcode">
-                        <button type="submit" class="button button-tonal-medium rounded-circle property-search-icon">
-                            <span class="material-icons-two-tone">search</span>
-                        </button>
+                        <input type="search" class="form-control" placeholder="Address, neighborhood, city, or zipcode">
+                        <select class="form-control">
+                            <option value="For Sale">For Sale</option>
+                            <option value="For Sale">For Rent</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="Houses">Houses</option>
+                            <option value="Townhomes">Townhomes</option>
+                            <option value="Multi-family">Multi-family</option>
+                            <option value="Condos-Co-ops">Condos-Co-ops</option>
+                            <option value="Lots/Land">Lots/Land</option>
+                            <option value="Apartments">Apartments</option>
+                            <option value="Manufactured">Manufactured</option>
+                        </select>
+                        <button type="button" class="button button-primary">Save search</button>
                     </div>
                 </form>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="text-align-center">
-                    <div class="section-title">Latest Properties for Rent</div>
-                    <p class="section-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices blandit volutpat.</p>
+                
+                <div class="display-flex align-items-center justify-content-between">
+                    <div class="font-size-16 font-weight-semibold">18 results</div>
+                    <div class="dropdown">
+                        <button type="button" class="button button-link-primary dropdown-toggle" aria-haspopup="true" aria-expanded="false">Sort: Homes for You <span class="material-symbols-rounded">expand_more</span></button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="#">Homes for You</a></li>
+                            <li class="dropdown-item"><a href="#">Price (High to Low)</a></li>
+                            <li class="dropdown-item"><a href="#">Price (Low to High)</a></li>
+                            <li class="dropdown-item"><a href="#">Newest</a></li>
+                            <li class="dropdown-item"><a href="#">Bedrooms</a></li>
+                            <li class="dropdown-item"><a href="#">Bathrooms</a></li>
+                            <li class="dropdown-item"><a href="#">Square Feet</a></li>
+                            <li class="dropdown-item"><a href="#">Lot Size</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="display-grid grid-row-4 gap-3 mt-4">
+                <div class="display-grid grid-row-4 gap-3 mt-2">
                     <div class="card hover-scale-1">
                         <a href="#">
                             <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
@@ -162,58 +173,34 @@
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="display-flex justify-content-center mt-2">
-                    <a href="#" class="button button-primary button-md gap-2">See more listings <span class="material-symbols-rounded">arrow_forward</span></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section background-tonal-medium">
-            <div class="container">
-                <div class="display-grid grid-row-3 gap-4">
-                    <a href="buy.html" class="card hover-scale-1">
-                        <div class="content text-align-center p-2">
-                            <img src="/src/img/svg/buy-home.svg" width="100" loading="lazy" alt="">
-                            <div class="font-serif font-size-32 font-weight-semibold">Buy a home</div>
-                            <p>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</p>
+                    <div class="card hover-scale-1">
+                        <a href="#">
+                            <img src="/src/img/properties/property-5.png" class="card-img" loading="lazy" alt="">
+                        </a>
+                        <div class="content">
+                            <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                <span class="material-icons-outlined">favorite_border</span>
+                            </button>
+                            <a href="#">
+                                <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
+                            </a>
                         </div>
-                    </a>
-                    <a href="sell.html" class="card hover-scale-1">
-                        <div class="content text-align-center p-2">
-                            <img src="/src/img/svg/sell-home.svg" width="100" loading="lazy" alt="">
-                            <div class="font-serif font-size-32 font-weight-semibold">Sell a home</div>
-                            <p>No matter what path you take to sell your home, we can help you navigate a successful sale.</p>
+                    </div>
+                    <div class="card hover-scale-1">
+                        <a href="#">
+                            <img src="/src/img/properties/property-6.png" class="card-img" loading="lazy" alt="">
+                        </a>
+                        <div class="content">
+                            <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                <span class="material-icons-outlined">favorite_border</span>
+                            </button>
+                            <a href="#">
+                                <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
+                            </a>
                         </div>
-                    </a>
-                    <a href="rent.html" class="card hover-scale-1">
-                        <div class="content text-align-center p-2">
-                            <img src="/src/img/svg/rent-home.svg" width="100" loading="lazy" alt="">
-                            <div class="font-serif font-size-32 font-weight-semibold">Rent a home</div>
-                            <p>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section" style="background-image: url('/src/img/cta/cta-default.png');">
-            <div class="container">
-                <div class="cta-content">
-                    <div class="cta-title">Find Best Place For Living</div>
-                    <p class="cta-text">Spend vacations in best hotels and resorts find the great place of your choice using different searching options.</p>
-                    <a href="" class="button button-light button-lg">Contact Us</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-title">Latest Properties for Sale</div>
-                <p class="section-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices blandit volutpat.</p>
-
-                <div class="display-grid grid-row-4 gap-3 mt-4">
+                    </div>
                     <div class="card hover-scale-1">
                         <a href="#">
                             <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
@@ -223,8 +210,8 @@
                                 <span class="material-icons-outlined">favorite_border</span>
                             </button>
                             <a href="#">
-                                <div class="font-weight-semibold mb-1">Php 1,500,000</div>
-                                <div class="text-color-medium">92 Allium Place, Orlando FL 32827</div>
+                                <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
                             </a>
                         </div>
                     </div>
@@ -237,89 +224,15 @@
                                 <span class="material-icons-outlined">favorite_border</span>
                             </button>
                             <a href="#">
-                                <div class="font-weight-semibold mb-1">Php 900,000</div>
-                                <div class="text-color-medium">4-room apartment with a beautiful terrace</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card hover-scale-1">
-                        <a href="#">
-                            <img src="/src/img/properties/property-3.png" class="card-img" loading="lazy" alt="">
-                        </a>
-                        <div class="content">
-                            <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                <span class="material-icons-outlined">favorite_border</span>
-                            </button>
-                            <a href="#">
                                 <div class="font-weight-semibold mb-1">Php 3,000,000</div>
                                 <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
                             </a>
                         </div>
                     </div>
-                    <div class="card hover-scale-1">
-                        <a href="#">
-                            <img src="/src/img/properties/property-4.png" class="card-img" loading="lazy" alt="">
-                        </a>
-                        <div class="content">
-                            <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                <span class="material-icons-outlined">favorite_border</span>
-                            </button>
-                            <a href="#">
-                                <div class="font-weight-semibold mb-1">Php 3,000,000</div>
-                                <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="display-flex justify-content-center mt-2">
-                    <a href="#" class="button button-primary button-md gap-2">See more listings <span class="material-symbols-rounded">arrow_forward</span></a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-		<div class="container">
-			<div class="footer-wrapper py-4">
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">About</div>
-					<ul class="footer-menu">
-						<li><a href="" class="footer-link">Research</a></li>
-						<li><a href="" class="footer-link">Fair Housing Guide</a></li>
-						<li><a href="" class="footer-link">Get the App</a></li>
-						<li><a href="" class="footer-link">Advertise</a></li>
-						<li><a href="about.html" class="footer-link">About Us</a></li>
-						<li><a href="" class="footer-link">Contact Us</a></li>
-					</ul>
-				</div>
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">Customer Service</div>
-					<ul class="footer-menu">
-						<li><a href="" class="footer-link">Careers</a></li>
-						<li><a href="" class="footer-link">Agent Finder</a></li>
-						<li><a href="" class="footer-link">Blog</a></li>
-						<li><a href="" class="footer-link">Help and Support</a></li>
-						<li><a href="" class="footer-link">Affiliate</a></li>
-						<li><a href="" class="footer-link">Investors</a></li>
-					</ul>
-				</div>
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">Security Policy</div>
-					<ul class="footer-menu">
-						<li><a href="terms-of-use.html" class="footer-link">Terms</a></li>
-						<li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-						<li><a href="" class="footer-link">Cookies Settings</a></li>
-						<li><a href="" class="footer-link">Sitemap</a></li>
-						<li><a href="" class="footer-link">Accessibility Statement</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div>Copyright &copy; 2023. Oltrie by Gocloud Inc. All rights reserved.</div>
-			</div>
-		</div>
-	</footer>
     
     <!-- Scripts -->
     <script type="module" src="/src/js/app.js"></script>

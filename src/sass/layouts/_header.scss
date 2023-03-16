@@ -50,9 +50,87 @@
             }
 
             .nav-item {
+                .active {
+                    background: rgba(var(--color-primary-rgb), 0.1);
+                }
+                
                 .nav-link {
                     font-weight: normal;
                     color: var(--color-light);
+                    transition: all 0.3s ease;
+                    padding: 0.5rem;
+                    border-radius: 8px;
+
+                    &:hover {
+                        background: rgba(var(--color-primary-rgb), 0.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-inner {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: var(--color-light);
+    box-shadow: rgba(var(--color-dark-rgb), 0.1) 0px 4px 6px -1px, rgba(var(--color-dark-rgb), 0.06) 0px 2px 4px -1px;
+    transition: all 0.4s ease;
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 0;
+
+        #nav-button-toggler {
+            display: none;
+
+            @media (max-width: 864px) {
+                display: flex;
+            }
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-dark);
+
+            .logo {
+                width: 3rem;
+    
+                @media (max-width: 600px) {
+                    width: 2.5rem;
+                }
+            }
+        }
+
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 0;
+            margin: 0;
+
+            @media (max-width: 864px) {
+                display: none;
+            }
+
+            .nav-item {
+                .active {
+                    background: rgba(var(--color-primary-rgb), 0.1);
+                }
+
+                .nav-link {
+                    font-weight: normal;
+                    color: var(--color-dark);
                     transition: all 0.3s ease;
                     padding: 0.5rem;
                     border-radius: 8px;
@@ -132,5 +210,22 @@ header.sticky {
                 margin: 1.3rem;
             }
         }
+    }
+}
+
+.property-filter {
+    position: relative;
+    
+    .property-search {
+        position: relative;
+        background-color: var(--color-card);
+        border-radius: 8px;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        width: 100%;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        gap: 1rem;
     }
 }
