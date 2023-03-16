@@ -31,7 +31,7 @@ export default defineConfig({
         brotliSize: true,
         rollupOptions: {
             input: {
-                app: 'public/js/app.js',
+                app: 'src/js/app.js',
                 index: resolve(__dirname, 'index.html'),
                 about: resolve(__dirname, 'about.html'),
             },
