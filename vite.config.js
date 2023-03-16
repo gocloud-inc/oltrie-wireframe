@@ -1,7 +1,8 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import htmlMinifier from 'html-minifier';
 import sass from 'sass';
+import { resolve } from 'path';
+import glob from 'glob';
 
 function minifyHtml() {
     return {
@@ -32,8 +33,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 app: 'src/js/app.js',
-                index: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about.html'),
+                ...getHtmlEntries(),
             },
             output: {
                 dir: 'dist',
@@ -49,3 +49,13 @@ export default defineConfig({
         }
     },
 });
+
+function getHtmlEntries() {
+    const entries = {};
+    const htmlFiles = glob.sync('*.html');
+    htmlFiles.forEach(file => {
+        const name = file.replace('.html', '');
+        entries[name] = resolve(__dirname, file);
+    });
+    return entries;
+}

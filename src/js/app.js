@@ -1,6 +1,6 @@
-// import * as Turbo from "@hotwired/turbo";
+import * as Turbo from "@hotwired/turbo";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
     // Sticky Header
     // Get the header element
     let header = document.querySelector(".header");
