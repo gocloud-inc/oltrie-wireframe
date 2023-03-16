@@ -1,0 +1,1 @@
+import"./turbo.es2017-esm-a6b16222.js";document.addEventListener("turbo:load",(()=>{let e=document.getElementById("search-input"),t=document.getElementById("search-popup");e.addEventListener("click",(()=>{t.classList.add("d-block")}))}));
