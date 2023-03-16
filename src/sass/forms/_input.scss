@@ -4,7 +4,7 @@
     outline: none;
     padding: 12px 14px;
     font-family: var(--font-sans-serif);
-    font-size: 14px;
+    font-size: 1rem;
     background: var(--color-card) !important;
     background-clip: padding-box;
     border: 2px solid rgba(var(--color-dark-rgb), .1);
@@ -45,21 +45,19 @@ textarea {
     resize: none;
 }
 
-label, .form-label {
-    position: relative;
-    font-size: 14px;
-    font-weight: 500;
-}
-
 .form {
     position: relative;
     display: grid;
     gap: 0.2rem;
 }
 
-.input-group {
-    display: flex;
-    align-items: center;
+.form-group {
+    display: grid;
+    gap: 0.7rem;
+
+    label, .form-label {
+        font-size: 1rem;
+    }
 
     .input-tag {
         font-size: 13px;

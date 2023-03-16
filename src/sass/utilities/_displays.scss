@@ -22,6 +22,14 @@ $justify-content-values: (
   "around": space-around
 );
 
+$justify-item-values: (
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "between": space-between,
+  "around": space-around
+);
+
 $text-align-values: (
   "start": start,
   "center": center,
@@ -43,6 +51,12 @@ $text-align-values: (
 @each $justify, $value in $justify-content-values {
   .justify-content-#{$justify} {
     justify-content: $value;
+  }
+}
+
+@each $justify, $value in $justify-item-values {
+  .justify-items-#{$justify} {
+    justify-items: $value;
   }
 }
 
