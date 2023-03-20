@@ -19,6 +19,12 @@ $gap-values: (
     grid-template-columns: repeat(auto-fill, minmax(35em, 1fr));
 }
 
+@media (min-width: 1024px) {
+    .grid-column-50-lg {
+        grid-template-columns: 50%;
+    }
+}
+
 .grid-row-3 {
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 }

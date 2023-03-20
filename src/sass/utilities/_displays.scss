@@ -36,6 +36,11 @@ $text-align-values: (
   "end": end,
 );
 
+$float-values: (
+  "start": start,
+  "end": end,
+);
+
 @each $display, $value in $display-values {
   .display-#{$display} {
     display: $value;
@@ -63,5 +68,11 @@ $text-align-values: (
 @each $text-align, $value in $text-align-values {
   .text-align-#{$text-align} {
     text-align: $value;
+  }
+}
+
+@each $float, $value in $float-values {
+  .float-#{float} {
+    float: $value;
   }
 }

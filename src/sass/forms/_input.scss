@@ -1,3 +1,5 @@
+@import "./checkbox";
+
 %input-default {
     position: relative;
     width: 100%;
@@ -11,9 +13,7 @@
     border-radius: 8px;
     transition: all 0.1s ease;
     color: var(--color-dark);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    line-height: 1.6;
 
     &:hover, &:focus {
         box-shadow: none;
@@ -29,6 +29,9 @@
 
 input[type=date] {
     color: var(--color-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .form-input, .form-control {
@@ -45,18 +48,13 @@ textarea {
     resize: none;
 }
 
-.form {
-    position: relative;
-    display: grid;
-    gap: 0.2rem;
-}
-
 .form-group {
     display: grid;
     gap: 0.7rem;
 
-    label, .form-label {
+    .form-label {
         font-size: 1rem;
+        font-weight: 600;
     }
 
     .input-tag {
@@ -79,33 +77,6 @@ textarea {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
-}
-
-.form-check-input {
-    transition: all 0.2s ease;
-    background-color: var(--color-card);
-	cursor: pointer;
-	padding: 0.5rem;
-    width: 1.3em;
-    height: 1.3em;
-    border-color: rgba(var(--color-dark-rgb), 0.4);
-
-	&:focus {
-        outline: none;
-        box-shadow: none;
-        border-color: none;
-    }
-
-	&:checked {
-		background-color: var(--color-primary);
-		border-color: var(--color-primary);
-	}
-}
-
-.form-switch .form-check-input {
-    width: 2.8em;
-    height: 1.6em;
-    transition: all 0.2s ease;
 }
 
 // Sizing
@@ -145,8 +116,10 @@ textarea {
     }
 }
 
+// Form Helper
 .form-text {
     color: rgba(var(--color-dark-rgb), 0.8);
+    line-height: 1.4;
 }
 
 

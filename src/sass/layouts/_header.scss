@@ -50,7 +50,7 @@
             }
 
             .nav-item {
-                .active {
+                .active, [aria-current=page] {
                     background: rgba(var(--color-primary-rgb), 0.1);
                 }
 
@@ -124,7 +124,7 @@
             }
 
             .nav-item {
-                .active {
+                .active, [aria-current=page] {
                     background: rgba(var(--color-primary-rgb), 0.1);
                 }
 
@@ -134,6 +134,9 @@
                     transition: all 0.3s ease;
                     padding: 0.5rem;
                     border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
 
                     &:hover {
                         background: rgba(var(--color-primary-rgb), 0.1);

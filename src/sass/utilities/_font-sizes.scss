@@ -4,7 +4,7 @@ $max-font-size: 96;
 
 // Loop through font sizes and create utility classes
 @for $i from 1 through 12 {
-    $size: ($i - 1) * 8 + $min-font-size;
+    $size: ($i - 1) * 2 + $min-font-size;
     .font-size-#{$size} {
         font-size: #{$size}px !important;
     }

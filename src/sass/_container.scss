@@ -1,9 +1,4 @@
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-
+%containerGutterBreakpoints {
     @media (max-width: 1400px) {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -13,4 +8,22 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     } 
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @extend %containerGutterBreakpoints;
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @extend %containerGutterBreakpoints;
 }
