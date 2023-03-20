@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover your dream home with Oltrie - the premier real estate brand committed to providing top-notch service and expertise. Find luxury properties at affordable prices today.">
-    <title>Sell Your Home - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
+    <title>Sign In - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/src/img/favicon.svg" type="image/x-icon">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/src/sass/app.scss">
 </head>
 <body>
-    <header class="header">
+    <header class="header-inner">
         <div class="container">
             <nav class="nav">
                 <button type="button" class="button button-light rounded-circle-sm" id="nav-button-toggler">
@@ -42,7 +42,7 @@
                         <a href="rent.html" class="nav-link">Rent</a>
                     </li>
                     <li class="nav-item">
-                        <a href="sell.html" class="nav-link active">Sell</a>
+                        <a href="sell.html" class="nav-link">Sell</a>
                     </li>
                     <li class="nav-item">
                         <a href="home-loans.html" class="nav-link">Home Loans</a>
@@ -76,78 +76,59 @@
     </header>
 
     <main>
-        <section class="hero-section" style="background-image: url('/src/img/hero/hero-banner.png');">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Sell your home with confidence</h1>
-                    <p class="hero-text">Oltrie is making it simpler to sell your home and move forward.</p>
-                </div>
-            </div>
-        </section>
-
         <section class="section">
             <div class="container">
-                <div class="display-grid align-items-center grid-column-2 gap-3">
-                    <div>
-                        <div class="section-title font-size-40">Sell traditionally with an agent</div>
-                        <p class="text">When you work with a real estate agent, you'll get selling support at every step, from prepping and listing your home to marketing that gets buyers in the door.</p>
-
-                        <div class="font-size-24 font-serif">Why sell traditionally</div>
-                        <ul class="display-grid gap-3">
-                            <li class="text">Potential for bidding wars</li>
-                            <li class="text">Access to local market expertise</li>
-                            <li class="text">Get help negotiating and reviewing offers</li>
-                            <li class="text">Navigate a stressful process with a dedicated guide</li>
-                        </ul>
-                        <a href="#" class="button button-primary button-lg mt-2">Find an agent</a>
+                <div class="auth-wrapper">
+                    <div class="text-align-center">
+                        <div class="section-title font-size-40">Welcome to Oltrie</div>
+                        <p class="text">Are you searching for the perfect place to call home? Look no further than our properties!</p>
                     </div>
-                    <img src="/src/img/svg/agent.svg" width="100%" loading="lazy" alt="">
+                    <div class="card">
+                        <div class="content p-2">
+                            <form action="">
+                                <div class="font-size-24 font-weight-semibold font-serif mb-1">Sign In</div>
+                                <div class="display-grid grid-column-1 gap-3">
+                                    <div class="form-group">
+                                        <label for="label" class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="form-label">Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter password" required>
+                                    </div>
+                                    <button type="submit" class="button button-primary button-md">Sign in</button>
+                                    <a href="forgot-password.html" class="text-align-center text-color-medium">Forgot your password?</a>
+                                </div>
+                            </form>
+                            <hr class="my-2" />
+                            <div class="display-grid gap-2">
+                                <div class="font-weight-medium text-color-medium text-align-center mb-1">Or connect with:</div>
+                                <div class="card hover-scale-1">
+                                    <div class="content display-flex align-items-center justify-content-center gap-3 py-1">
+                                        <img src="src/img/logo/apple.png" width="24" alt="">
+                                        <div class="font-weight-semibold">Continue with Apple</div>
+                                    </div>
+                                </div>
+                                <div class="card hover-scale-1">
+                                    <div class="content display-flex align-items-center justify-content-center gap-3 py-1">
+                                        <img src="src/img/logo/facebook.png" width="24" alt="">
+                                        <div class="font-weight-semibold">Continue with Facebook</div>
+                                    </div>
+                                </div>
+                                <div class="card hover-scale-1">
+                                    <div class="content display-flex align-items-center justify-content-center gap-3 py-1">
+                                        <img src="src/img/logo/google.png" width="24" alt="">
+                                        <div class="font-weight-semibold">Continue with Google</div>
+                                    </div>
+                                </div>
+                                <a href="register.html" class="button button-link-primary font-weight-medium">Don't have an account yet? Create an account</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer>
-		<div class="container">
-			<div class="footer-wrapper py-4">
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">About</div>
-					<ul class="footer-menu">
-						<li><a href="" class="footer-link">Research</a></li>
-						<li><a href="" class="footer-link">Fair Housing Guide</a></li>
-						<li><a href="" class="footer-link">Get the App</a></li>
-						<li><a href="" class="footer-link">Advertise</a></li>
-						<li><a href="about.html" class="footer-link">About Us</a></li>
-						<li><a href="" class="footer-link">Contact Us</a></li>
-					</ul>
-				</div>
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">Customer Service</div>
-					<ul class="footer-menu">
-						<li><a href="" class="footer-link">Careers</a></li>
-						<li><a href="" class="footer-link">Agent Finder</a></li>
-						<li><a href="" class="footer-link">Blog</a></li>
-						<li><a href="" class="footer-link">Help and Support</a></li>
-						<li><a href="" class="footer-link">Affiliate</a></li>
-						<li><a href="" class="footer-link">Investors</a></li>
-					</ul>
-				</div>
-				<div class="text-align-center">
-					<div class="font-size-16 font-weight-semibold">Security Policy</div>
-					<ul class="footer-menu">
-						<li><a href="terms-of-use.html" class="footer-link">Terms</a></li>
-						<li><a href="privacy-policy.html" class="footer-link">Privacy Policy</a></li>
-						<li><a href="" class="footer-link">Cookies Settings</a></li>
-						<li><a href="" class="footer-link">Sitemap</a></li>
-						<li><a href="" class="footer-link">Accessibility Statement</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div>Copyright &copy; 2023. Oltrie by Gocloud Inc. All rights reserved.</div>
-			</div>
-		</div>
-	</footer>
     
     <!-- Scripts -->
     <script type="module" src="/src/js/app.js"></script>

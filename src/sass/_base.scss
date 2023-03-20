@@ -24,8 +24,16 @@ p {
     line-height: 1.5;
 }
 
+hr {
+    border-color: rgba(var(--color-dark-rgb), 0.05);
+}
+
 .text {
     font-size: 1.1rem;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
 }
 
 .font-serif {

@@ -9,7 +9,7 @@
     .hero-content {
         text-align: center;
         display: grid;
-        grid-template-columns: 80%;
+        grid-template-columns: 90%;
         justify-content: center;
         justify-items: center;
 
@@ -83,4 +83,16 @@
 
 .section-text {
     color: var(--color-medium);
+}
+
+.auth-wrapper {
+    display: grid;
+    grid-template-columns: 40%;
+    grid-gap: 2em;
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 100%;
+    }
 }

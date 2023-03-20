@@ -23,6 +23,8 @@
         margin: 12px 0;
         z-index: 1;
         min-width: 15rem;
+        max-height: 85vh;
+        overflow: auto;
 
         .dropdown-heading {
             font-size: 13px;
