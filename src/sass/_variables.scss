@@ -68,3 +68,11 @@
     --font-serif: 'PLayfair Display', serif;
 	--font-base: 1rem;
 }
+
+// $color-mode-type: data;
+
+// @include color-mode(dark) {
+// 	.card {
+// 		background-color: #181818;
+// 	}
+// }

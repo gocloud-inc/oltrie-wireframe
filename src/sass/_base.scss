@@ -57,3 +57,24 @@ hr {
     justify-content: center;
     align-items: center;
 }
+
+// Modal
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-text {
+    font-size: 0.9em;
+    color: rgba(var(--color-dark-rgb), 0.8);
+}
+
+.modal-backdrop {
+    background: rgba(var(--color-dark-rgb), .2);
+    backdrop-filter: saturate(180%) blur(15px);
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+}
+
+.modal-backdrop.show {
+    opacity: unset;
+}

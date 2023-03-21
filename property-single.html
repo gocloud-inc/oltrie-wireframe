@@ -156,32 +156,32 @@
     
                             <div class="d-flex gap-2 mt-3">
                                 <button type="button" class="button button-primary w-100">Request a tour</button>
-                                <button type="button" class="button button-outline-primary w-100">Ask a question</button>
+                                <button type="button" class="button button-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#askQuestionModal">Ask a question</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-container">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" data-tab="tab1">Overview</button>
-                        <button class="tab-button" data-tab="tab2">Facts and features</button>
-                        <button class="tab-button" data-tab="tab3">Home value</button>
-                        <button class="tab-button" data-tab="tab3">Price and tax history</button>
-                        <button class="tab-button" data-tab="tab3">Monthly cost</button>
-                        <button class="tab-button" data-tab="tab3">Rental value</button>
-                        <button class="tab-button" data-tab="tab3">Landmarks</button>
-                        <button class="tab-button" data-tab="tab3">Neighborhood</button>
-                        <button class="tab-button" data-tab="tab3">Local legal protection</button>
+                    <div class="tab-buttons" role="tablist">
+                        <button class="tab-button active" data-tab="tab1" role="tab" aria-selected="true">Overview</button>
+                        <button class="tab-button" data-tab="tab2" role="tab" aria-selected="false">Facts and features</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Home value</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Price and tax history</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Monthly cost</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Rental value</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Landmarks</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Neighborhood</button>
+                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Local legal protection</button>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-panel active" data-tab="tab1">
+                        <div class="tab-panel active" data-tab="tab1" role="tabpanel" aria-labelledby="" tabindex="0">
                             <p>Very private, secluded Eagle River home on large 1.36 acre lot located near the Nature Center. Wall of windows in vaulted open living/kitchen area provides tons of light and is perfect for entertaining. Huge recreational room on lower level. Do not miss out on this great opportunity for sweat equity or investment! Please make an appointment with a Real Estate Agent/Broker of your choice to view.</p>
                         </div>
-                        <div class="tab-panel" data-tab="tab2">
+                        <div class="tab-panel" data-tab="tab2" role="tabpanel" aria-labelledby="" tabindex="0">
                             <p>This is the content of tab 2.</p>
                         </div>
-                        <div class="tab-panel" data-tab="tab3">
+                        <div class="tab-panel" data-tab="tab3" role="tabpanel" aria-labelledby="" tabindex="0">
                             <p>This is the content of tab 3.</p>
                         </div>
                     </div>
@@ -308,18 +308,56 @@
 			</div>
 		</div>
 	</footer>
+
+    <!-- Ask a question modal -->
+    <div class="modal fade" id="askQuestionModal" tabindex="-1" aria-labelledby="askQuestionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-body p-4">
+                        <button type="button" class="button button-tonal-medium rounded-circle position-absolute top-0 right-0 m-2" data-bs-dismiss="modal">
+                            <span class="material-symbols-rounded">close</span>
+                        </button>
+                        <div class="row g-4">
+                            <div class="col-xl-12">
+                                <div class="modal-title">Ask a question</div>
+                                <span class="modal-text">Chat with a local partner agent to get questions answered, tour and more.</span>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Message</label>
+                                    <textarea class="form-control" cols="30" rows="3" required>I am interested in 1840 Mount Yukla Cir, Eagle River, AK 99577.</textarea>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <button type="submit" class="button button-primary w-100" data-bs-dismiss="modal">Contact agent</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <!-- Scripts -->
     <script type="module" src="/src/js/app.js"></script>
-    <script>
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            contentClick: "iterateZoom",
-            Images: {
-                Panzoom: {
-                    maxScale: 5,
-                },
-            },
-        });
-    </script>
 </body>
 </html>

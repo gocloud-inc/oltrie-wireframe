@@ -1,4 +1,5 @@
 import * as Turbo from "@hotwired/turbo";
+import { Modal } from 'bootstrap';
 
 document.addEventListener('turbo:load', () => {
     // Sticky Header
@@ -67,12 +68,14 @@ document.addEventListener('turbo:load', () => {
     const tabPanels = document.querySelectorAll('.tab-panel');
 
     function showPanel(panelIndex) {
-        tabPanels.forEach(function(panel) {
+        if (tabPanels.length > panelIndex && panelIndex >= 0) {
+            tabPanels.forEach(panel => {
             panel.classList.remove('active');
-        });
-        tabPanels[panelIndex].classList.add('active');
+            });
+            tabPanels[panelIndex].classList.add('active');
+        }
     }
-
+        
     function showTab(event) {
         const selectedTab = event.target.dataset.tab;
 
@@ -95,4 +98,18 @@ document.addEventListener('turbo:load', () => {
             showPanel(index);
         });
     });
+
+    // Fancy box
+    const fancyboxGallery = '[data-fancybox="gallery"]';
+    const fancyboxOptions = {
+        contentClick: "iterateZoom",
+        Images: {
+            Panzoom: {
+            maxScale: 5,
+            },
+        },
+    };
+
+    Fancybox.bind(fancyboxGallery, fancyboxOptions);
+
 });

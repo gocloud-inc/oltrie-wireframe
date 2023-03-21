@@ -148,8 +148,9 @@
 }
 
 header.sticky {
-    background-color: var(--color-light);
+    background-color: rgba(var(--color-light-rgb), 0.89);
     box-shadow: rgba(var(--color-dark-rgb), 0.1) 0px 4px 6px -1px, rgba(var(--color-dark-rgb), 0.06) 0px 2px 4px -1px;
+    backdrop-filter: blur(6px);
 
     .nav {
         .nav-brand {

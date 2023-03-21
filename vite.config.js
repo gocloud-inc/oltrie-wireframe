@@ -22,6 +22,15 @@ function minifyHtml() {
 
 export default defineConfig({
     base: '',
+    resolve: {
+        alias: {
+            '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+        }
+    },
+    server: {
+        port: 8080,
+        hot: true
+    },
     plugins: [
         minifyHtml(),
     ],
