@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover your dream home with Oltrie - the premier real estate brand committed to providing top-notch service and expertise. Find luxury properties at affordable prices today.">
-    <title>Oltrie - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
+    <title>Property Single - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/src/img/favicon.svg" type="image/x-icon">
@@ -22,9 +22,13 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/src/sass/app.scss">
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
 </head>
 <body>
-    <header class="header">
+    <header class="header-inner">
         <div class="container">
             <nav class="nav">
                 <button type="button" class="button button-light rounded-circle-sm" id="nav-button-toggler">
@@ -79,155 +83,116 @@
     </header>
 
     <main>
-        <section class="hero-section" style="background-image: url('/src/img/hero/hero-banner.png');">
+        <section class="section">
             <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Easy way to find a perfect property</h1>
-                    <p class="hero-text">We provide a complete service for the sale, purchase or rental of real estate.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <div class="container">
-                <form action="" class="property-wrapper">
-                    <div class="property-search">
-                        <input type="search" class="form-control property-search-control" placeholder="Enter an address, neighborhood, city, or zipcode">
-                        <button type="submit" class="button button-tonal-medium rounded-circle property-search-icon">
-                            <span class="material-icons-two-tone">search</span>
-                        </button>
+                <div class="row g-4">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="property-carousel-container">
+                            <img src="/src/img/properties/property-1.png" class="property-carousel-img" width="100%" loading="lazy" alt="">
+                            <div class="property-carousel-thumbnails">
+                                <a href="/src/img/properties/property-1.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
+                                    <img src="/src/img/properties/property-1.png" class="property-carousel-thumb-img" alt="">
+                                </a>
+                                <a href="/src/img/properties/property-2.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
+                                    <img src="/src/img/properties/property-2.png" class="property-carousel-thumb-img" alt="">
+                                </a>
+                                <a href="/src/img/properties/property-3.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
+                                    <img src="/src/img/properties/property-3.png" class="property-carousel-thumb-img" alt="">
+                                </a>
+                                <a href="/src/img/properties/property-4.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
+                                    <img src="/src/img/properties/property-4.png" class="property-carousel-thumb-img" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="property-content">
+                            <div class="d-flex position-absolute top-0 right-0 gap-2">
+                                <button type="button" class="button button-tonal-medium rounded-circle"><span class="material-symbols-rounded">share</span></button>
+                                <button type="button" class="button button-tonal-primary rounded-circle"><span class="material-symbols-rounded">favorite_border</span></button>
+                                <div class="dropdown">
+                                    <button type="button" class="button button-tonal-medium rounded-circle dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span class="material-symbols-rounded">more_horiz</span></button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="#">Get new listings in email</a></li>
+                                        <li class="dropdown-item"><a href="#">View owner dashboard</a></li>
+                                        <li class="dropdown-item"><a href="#">Report problem with listing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="property-price">Php 359,900</div>
+                            <p >Est. payment: Php 2,306/mo</p>
+                            
+                            <ul class="p-0 d-grid gap-3">
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="material-icons-round text-color-danger">sell</span> For Sale
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="material-icons-two-tone">place</span> 1840 Mount Yukla Cir, Eagle River, AK 99577
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="material-icons-two-tone">bed</span> 6 bedroom
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="material-icons-two-tone">bathroom</span> 4 bathroom
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="material-icons-two-tone">crop</span> 3,797 sqft
+                                </li>
+                            </ul>
+    
+                            <div class="card">
+                                <div class="content p-2">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="content-icon background-tonal-primary rounded-xl">
+                                            <span class="material-icons-two-tone">person</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-size-14 text-color-medium">Listed by</div>
+                                            <div class="font-size-16 font-weight-semibold">Barbara L Huntley</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="d-flex gap-2 mt-3">
+                                <button type="button" class="button button-primary w-100">Request a tour</button>
+                                <button type="button" class="button button-outline-primary w-100">Ask a question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="tab1">Overview</button>
+                        <button class="tab-button" data-tab="tab2">Facts and features</button>
+                        <button class="tab-button" data-tab="tab3">Home value</button>
+                        <button class="tab-button" data-tab="tab3">Price and tax history</button>
+                        <button class="tab-button" data-tab="tab3">Monthly cost</button>
+                        <button class="tab-button" data-tab="tab3">Rental value</button>
+                        <button class="tab-button" data-tab="tab3">Landmarks</button>
+                        <button class="tab-button" data-tab="tab3">Neighborhood</button>
+                        <button class="tab-button" data-tab="tab3">Local legal protection</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" data-tab="tab1">
+                            <p>Very private, secluded Eagle River home on large 1.36 acre lot located near the Nature Center. Wall of windows in vaulted open living/kitchen area provides tons of light and is perfect for entertaining. Huge recreational room on lower level. Do not miss out on this great opportunity for sweat equity or investment! Please make an appointment with a Real Estate Agent/Broker of your choice to view.</p>
+                        </div>
+                        <div class="tab-panel" data-tab="tab2">
+                            <p>This is the content of tab 2.</p>
+                        </div>
+                        <div class="tab-panel" data-tab="tab3">
+                            <p>This is the content of tab 3.</p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <div class="text-align-center">
-                    <div class="section-title">Latest Properties for Rent</div>
-                    <p class="section-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices blandit volutpat.</p>
-                </div>
-
-                <div class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 mt-2">
-                    <div class="col">
-                        <div class="card hover-scale-1">
-                            <a href="property-single.html">
-                                <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
-                            </a>
-                            <div class="content">
-                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                    <span class="material-icons-outlined">favorite_border</span>
-                                </button>
-                                <a href="property-single.html">
-                                    <div class="font-weight-semibold mb-1">Php 1,500,000</div>
-                                    <div class="text-color-medium">92 Allium Place, Orlando FL 32827</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card hover-scale-1">
-                            <a href="property-single.html">
-                                <img src="/src/img/properties/property-2.png" class="card-img" loading="lazy" alt="">
-                            </a>
-                            <div class="content">
-                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                    <span class="material-icons-outlined">favorite_border</span>
-                                </button>
-                                <a href="property-single.html">
-                                    <div class="font-weight-semibold mb-1">Php 900,000</div>
-                                    <div class="text-color-medium">4-room apartment with a beautiful terrace</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card hover-scale-1">
-                            <a href="property-single.html">
-                                <img src="/src/img/properties/property-3.png" class="card-img" loading="lazy" alt="">
-                            </a>
-                            <div class="content">
-                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                    <span class="material-icons-outlined">favorite_border</span>
-                                </button>
-                                <a href="property-single.html">
-                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
-                                    <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card hover-scale-1">
-                            <a href="property-single.html">
-                                <img src="/src/img/properties/property-4.png" class="card-img" loading="lazy" alt="">
-                            </a>
-                            <div class="content">
-                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
-                                    <span class="material-icons-outlined">favorite_border</span>
-                                </button>
-                                <a href="property-single.html">
-                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
-                                    <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-center mt-5">
-                    <a href="rent.html" class="button button-primary button-md gap-2">See more listings <span class="material-symbols-rounded">arrow_forward</span></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section background-tonal-medium">
-            <div class="container">
-                <div class="row row-cols-xl-3 row-cols-1 g-4">
-                    <div class="col">
-                        <a href="buy.html" class="card hover-scale-1 h-100">
-                            <div class="content text-align-center p-4">
-                                <img src="/src/img/svg/buy-home.svg" width="100" loading="lazy" alt="">
-                                <div class="font-serif font-size-32 font-weight-semibold my-3">Buy a home</div>
-                                <span>Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="sell.html" class="card hover-scale-1 h-100">
-                            <div class="content text-align-center p-4">
-                                <img src="/src/img/svg/sell-home.svg" width="100" loading="lazy" alt="">
-                                <div class="font-serif font-size-32 font-weight-semibold my-3">Sell a home</div>
-                                <span>No matter what path you take to sell your home, we can help you navigate a successful sale.</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="rent.html" class="card hover-scale-1 h-100">
-                            <div class="content text-align-center p-4">
-                                <img src="/src/img/svg/rent-home.svg" width="100" loading="lazy" alt="">
-                                <div class="font-serif font-size-32 font-weight-semibold my-3">Rent a home</div>
-                                <span>We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-section" style="background-image: url('/src/img/cta/cta-default.png');">
-            <div class="container">
-                <div class="cta-content">
-                    <div class="cta-title">Find Best Place For Living</div>
-                    <p class="cta-text">Spend vacations in best hotels and resorts find the great place of your choice using different searching options.</p>
-                    <a href="" class="button button-light button-lg">Contact Us</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-title">Latest Properties for Sale</div>
+                <div class="section-title">Similar homes</div>
                 <p class="section-text">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices blandit volutpat.</p>
 
                 <div class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 mt-3">
@@ -296,10 +261,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="d-flex justify-content-center mt-5">
-                    <a href="buy.html" class="button button-primary button-md gap-2">See more listings <span class="material-symbols-rounded">arrow_forward</span></a>
-                </div>
             </div>
         </section>
     </main>
@@ -350,5 +311,15 @@
     
     <!-- Scripts -->
     <script type="module" src="/src/js/app.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                    maxScale: 5,
+                },
+            },
+        });
+    </script>
 </body>
 </html>

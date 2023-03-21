@@ -61,4 +61,38 @@ document.addEventListener('turbo:load', () => {
 			toggleDropdown(dropdown);
         });
     });
+
+    // Tabs
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    function showPanel(panelIndex) {
+        tabPanels.forEach(function(panel) {
+            panel.classList.remove('active');
+        });
+        tabPanels[panelIndex].classList.add('active');
+    }
+
+    function showTab(event) {
+        const selectedTab = event.target.dataset.tab;
+
+        tabButtons.forEach(function(button) {
+            button.classList.remove('active');
+        });
+        event.target.classList.add('active');
+
+        tabPanels.forEach(function(panel) {
+            if (panel.dataset.tab === selectedTab) {
+            panel.classList.add('active');
+            }
+        });
+    }
+
+    showPanel(0);
+    tabButtons.forEach(function(button, index) {
+        button.addEventListener('click', function(event) {
+            showTab(event);
+            showPanel(index);
+        });
+    });
 });

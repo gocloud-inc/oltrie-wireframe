@@ -1,7 +1,5 @@
 // Default Border Radius
-$card-border-radius: 8px !default;
-$card-padding: 1.2rem;
-$card-margin: 1rem;
+$padding: 1.2rem;
 
 .card {
     position: relative;
@@ -13,18 +11,18 @@ $card-margin: 1rem;
     background: var(--color-card);
     background-clip: border-box;
     border: 1px solid rgba(var(--color-dark-rgb), 0.1);
-    border-radius: $card-border-radius;
+    border-radius: 8px;
     transition: all 0.2s ease-in-out;
 
     .header {
         position: relative;
-        border-top-left-radius: $card-border-radius;
-        border-top-right-radius: $card-border-radius;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 120px;
-        padding: $card-padding;
+        padding: $padding;
 
         .avatar-img {
             width: 150px;
@@ -38,16 +36,16 @@ $card-margin: 1rem;
         width: 100%;
         height: 200px;
         object-fit: cover;
-        border-top-left-radius: $card-border-radius;
-        border-top-right-radius: $card-border-radius;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     .card-img-sm {
         width: 100%;
         height: 150px;
         object-fit: cover;
-        border-top-left-radius: $card-border-radius;
-        border-top-right-radius: $card-border-radius;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     .card-img-overlay {
@@ -55,12 +53,12 @@ $card-margin: 1rem;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: $card-border-radius;
+        border-radius: 8px;
     }
 
     .content {
         flex: 1 1 auto;
-        padding: $card-padding;
+        padding: $padding;
 
         .card-badge {
             background-color: var(--color-primary);
@@ -85,9 +83,9 @@ $card-margin: 1rem;
     }
 
     .footer {
-        padding-left: $card-padding;
-        padding-right: $card-padding;
-        padding-bottom: $card-padding;
+        padding-left: $padding;
+        padding-right: $padding;
+        padding-bottom: $padding;
     }
 }
 

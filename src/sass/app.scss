@@ -2,6 +2,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;800&display=swap");
 
+// scss-docs-start import-stack
+// Configuration
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/pagination";
+@import "node_modules/bootstrap/scss/list-group";
+@import "node_modules/bootstrap/scss/close";
+@import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/popover";
+@import "node_modules/bootstrap/scss/offcanvas";
+@import "node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "node_modules/bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
 // Configuration 
 @import "variables";
 @import "base";
@@ -14,14 +42,13 @@
 @import "utilities/displays";
 @import "utilities/font-sizes";
 @import "utilities/font-weights";
-@import "utilities/margins";
-@import "utilities/paddings";
 @import "utilities/positions";
 
 // Components
 @import "components/buttons";
 @import "components/cards";
 @import "components/dropdown";
+@import "components/tabs";
 
 // Forms
 @import "forms/input";

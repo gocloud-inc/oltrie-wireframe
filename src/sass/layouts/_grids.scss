@@ -23,6 +23,14 @@ $gap-values: (
     .grid-column-50-lg {
         grid-template-columns: 50%;
     }
+    
+    .grid-row-column-2-lg {
+        grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    }
+}
+
+.grid-row-2 {
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
 }
 
 .grid-row-3 {

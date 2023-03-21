@@ -6,7 +6,7 @@ html, body {
     font-family: var(--font-sans-serif);
     background-color: var(--color-light);
     color: var(--color-light-contrast);
-    font-size: 1rem;
+    font-size: var(--font-base);
     margin: 0;
     padding: 0;
 }
@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 
-p {
+p, span, div {
     line-height: 1.5;
 }
 
@@ -47,4 +47,13 @@ hr {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         cursor: pointer;
     }
+}
+
+// Content Icon
+.content-icon {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
 }

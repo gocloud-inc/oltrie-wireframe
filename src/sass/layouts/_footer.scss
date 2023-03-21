@@ -3,12 +3,6 @@ footer {
     background: rgba(var(--color-card-contrast-rgb), 0.05);
 
     .footer-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-        justify-items: center;
-        justify-content: center;
-        gap: 1rem;
-
         .footer-menu {
             list-style: none;
             padding: 0;
