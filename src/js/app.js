@@ -63,6 +63,79 @@ document.addEventListener('turbo:load', () => {
         });
     });
 
+    // Search
+    const searchResultWrapper = document.getElementById('search-results');
+    const propertySearchInput = document.getElementById('search-input');
+
+    // debounce function to delay the search API call
+    function debounce(func, delay) {
+        let timerId;
+        return function (...args) {
+        clearTimeout(timerId);
+        timerId = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    function handleSearchInputChange(event) {
+        const searchValue = event.target.value;
+        const shouldShowResults = searchValue.length > 0;
+        searchResultWrapper.classList.toggle('show', shouldShowResults);
+    
+        if (shouldShowResults) {
+            fetch(`https://api.github.com/search/repositories?q=${searchValue}`, {
+                headers: {
+                    Authorization: 'Bearer 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',
+                },
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data); // log the response from the API to the console
+                // create HTML elements for each search result
+                const results = data.items.map(item => {
+                const result = document.createElement('ul');
+                    result.classList.add('result-menu');
+
+                    result.innerHTML = `
+                        <li class="result-item">
+                            <a href="${item.html_url}" class="result-link"><span class="material-symbols-rounded">location_on</span> ${item.name} ${item.language}</a>
+                        </li>
+                    `;
+                    return result;
+                });
+        
+                // append the search result elements to the DOM
+                searchResultWrapper.innerHTML = '';
+                results.forEach(result => {
+                    searchResultWrapper.appendChild(result);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching search results:', error);
+            });
+        } else {
+            searchResultWrapper.innerHTML = '';
+        }
+    }  
+
+    document.addEventListener('click', function(event) {
+        const isClickInside = searchResultWrapper.contains(event.target);
+        if (!isClickInside) {
+            searchResultWrapper.classList.remove('show');
+        }
+    });
+
+    // debounced event handler function
+    const debouncedHandleSearchInputChange = debounce(handleSearchInputChange, 100);
+
+    // attach debounced event handler to search input
+    propertySearchInput.addEventListener('input', debouncedHandleSearchInputChange);
+
+
     // Tabs
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanels = document.querySelectorAll('.tab-panel');
@@ -100,16 +173,17 @@ document.addEventListener('turbo:load', () => {
     });
 
     // Fancy box
-    const fancyboxGallery = '[data-fancybox="gallery"]';
-    const fancyboxOptions = {
-        contentClick: "iterateZoom",
-        Images: {
-            Panzoom: {
-            maxScale: 5,
-            },
-        },
-    };
+    // const fancyboxGallery = '[data-fancybox="gallery"]';
+    // const fancyboxOptions = {
+    //     contentClick: "iterateZoom",
+    //     Images: {
+    //         Panzoom: {
+    //         maxScale: 5,
+    //         },
+    //     },
+    // };
 
-    Fancybox.bind(fancyboxGallery, fancyboxOptions);
-
+    // if (fancyboxOptions) {
+    //     Fancybox.bind(fancyboxGallery, fancyboxOptions);
+    // }
 });

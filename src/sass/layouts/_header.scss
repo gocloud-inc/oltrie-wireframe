@@ -208,14 +208,59 @@ header.sticky {
             position: absolute;
             top: 0;
             right: 0;
-            margin: 1.6rem;
+            margin: 1.8rem;
 
             @media (max-width: 600px) {
                 margin: 1.3rem;
             }
         }
+
+        .property-search-result {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: none;
+            margin-top: 1rem;
+            background-color: var(--color-card);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            width: 100%;
+            height: fit-content;
+            max-height: 400px;
+            overflow-y: auto;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            
+            .result-menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                .result-item {
+                    .result-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 12px;
+
+                        &:hover {
+                            background-color: rgba(var(--color-primary-rgb), 0.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .property-search-result.show {
+            opacity: 1;
+            display: block;
+        }
     }
 }
+
 
 .property-filter {
     position: relative;
