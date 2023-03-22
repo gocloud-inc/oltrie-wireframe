@@ -20,16 +20,22 @@ function minifyHtml() {
     };
 }
 
+function getHtmlEntries() {
+    const entries = {};
+    const htmlFiles = glob.sync('*.html');
+    htmlFiles.forEach(file => {
+        const name = file.replace('.html', '');
+        entries[name] = resolve(__dirname, file);
+    });
+    return entries;
+}
+
 export default defineConfig({
     base: '',
     resolve: {
         alias: {
             '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
         }
-    },
-    server: {
-        port: 8080,
-        hot: true
     },
     plugins: [
         minifyHtml(),
@@ -58,13 +64,3 @@ export default defineConfig({
         }
     },
 });
-
-function getHtmlEntries() {
-    const entries = {};
-    const htmlFiles = glob.sync('*.html');
-    htmlFiles.forEach(file => {
-        const name = file.replace('.html', '');
-        entries[name] = resolve(__dirname, file);
-    });
-    return entries;
-}
