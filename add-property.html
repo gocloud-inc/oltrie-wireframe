@@ -25,7 +25,7 @@
 </head>
 <body>
     <header class="header-inner">
-        <div class="container-fluid">
+        <div class="container">
             <nav class="nav">
                 <button type="button" class="button button-light rounded-circle">
                     <span class="material-icons-outlined">menu</span>
@@ -59,7 +59,7 @@
 
     <main>        
         <section class="section">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="display-grid justify-content-center grid-column-50-lg">
                     <div class="bread">
                         <ol class="bread-menu">
@@ -78,31 +78,39 @@
                     <p class="text">This basic information sets up the property in Oltrie Rental Manager. Then you can create a rental listing for it.</p>
 
                     <form action="">
-                        <div class="display-grid gap-4 mb-2 mt-1">
-                            <div class="form-group">
-                                <label for="label" class="form-label">Street Address</label>
-                                <input type="text" class="form-control" required>
+                        <div class="row row-cols-1 g-4 mt-2">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Street Address</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="label" class="form-label">Property Category</label>
-                                <select class="form-control" required>
-                                    <option disabled selected>Please select</option>
-                                    <option value="For Rent">For Rent</option>
-                                    <option value="For Sell">For Sell</option>
-                                </select>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Property Category</label>
+                                    <select class="form-control" required>
+                                        <option disabled selected>Please select</option>
+                                        <option value="For Rent">For Rent</option>
+                                        <option value="For Sell">For Sell</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="label" class="form-label">Property Type</label>
-                                <select class="form-control" required>
-                                    <option disabled selected>Please select</option>
-                                    <option value="House">House</option>
-                                    <option value="Condo / Apartment Unit">Condo / Apartment Unit</option>
-                                    <option value="Townhouse">Townhouse</option>
-                                    <option value="Entire Apartment Community">Entire Apartment Community</option>
-                                </select>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Property Type</label>
+                                    <select class="form-control" required>
+                                        <option disabled selected>Please select</option>
+                                        <option value="House">House</option>
+                                        <option value="Condo / Apartment Unit">Condo / Apartment Unit</option>
+                                        <option value="Townhouse">Townhouse</option>
+                                        <option value="Entire Apartment Community">Entire Apartment Community</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a href="create-listing.html" class="button button-primary button-md float-end">Create listing</a>
                             </div>
                         </div>
-                        <a href="create-listing.html" class="button button-primary button-md">Create listing</a>
                     </form>
                 </div>
             </div>
