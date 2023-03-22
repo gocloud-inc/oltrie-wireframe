@@ -97,7 +97,7 @@ document.addEventListener('turbo:load', () => {
                         return response.json();
                     })
                     .then(data => {
-                        console.log(data); // log the response from the API to the console
+                        // console.log(data); // log the response from the API to the console
                         // create HTML elements for each search result
                         const results = data.items.map(item => {
                             const result = document.createElement('ul');
@@ -124,16 +124,9 @@ document.addEventListener('turbo:load', () => {
                 searchResultWrapper.innerHTML = '';
             }
         }
-            
-        document.addEventListener('click', function(event) {
-            const isClickInside = searchResultWrapper.contains(event.target);
-            if (!isClickInside) {
-                searchResultWrapper.classList.remove('show');
-            }
-        });
     
         // debounced event handler function
-        const debouncedHandleSearchInputChange = debounce(handleSearchInputChange, 100);
+        const debouncedHandleSearchInputChange = debounce(handleSearchInputChange, 300);
     
         // attach debounced event handler to search input
         propertySearchInput.addEventListener('input', debouncedHandleSearchInputChange);
@@ -190,4 +183,45 @@ document.addEventListener('turbo:load', () => {
 
     //     Fancybox.bind(fancyboxGallery, fancyboxOptions);
     // }
+
+
+    // Header Toggler
+    const navButtonToggler = document.getElementById('nav-button-toggler');
+    const navMenuElement = document.querySelector('.nav-menu');
+
+    navButtonToggler.addEventListener('click', () => {
+        navMenuElement.classList.add('show');
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        document.body.appendChild(overlay);
+        document.body.classList.add('overflow-hidden');
+
+        overlay.addEventListener('click', () => {
+            navMenuElement.classList.remove('show');
+            document.body.classList.remove('overflow-hidden');
+            overlay.remove();
+        });
+
+    });
+
+    // Hide Event Handler 
+    document.addEventListener('click', (event) => {
+        const isClickInsideNavMenu = navMenuElement.contains(event.target);
+        const isClickInsideNavButtonToggler = navButtonToggler.contains(event.target);
+    
+        if (!isClickInsideNavMenu && !isClickInsideNavButtonToggler) {
+            navMenuElement.classList.remove('show');
+        }
+    });
+
+    if (searchResultWrapper) {
+        document.addEventListener('click', function(event) {
+            const isClickInside = searchResultWrapper.contains(event.target); 
+    
+            if (!isClickInside) {
+                searchResultWrapper.classList.remove('show');
+            }
+        });
+    }
 });
