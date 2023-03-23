@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover your dream home with Oltrie - the premier real estate brand committed to providing top-notch service and expertise. Find luxury properties at affordable prices today.">
-    <title>Favorites - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
+    <title>Recently Viewed - Discover Your Dream Home with Oltrie - Your Trusted Real Estate Partner</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/src/img/favicon.svg" type="image/x-icon">
@@ -27,19 +27,40 @@
     <header class="header-inner">
         <div class="container">
             <nav class="nav">
-                <button type="button" class="button button-light rounded-circle">
+                <button type="button" class="button button-light rounded-circle-sm" id="nav-button-toggler">
                     <span class="material-icons-outlined">menu</span>
                 </button>
                 <a href="index.html" class="nav-brand">
                     <img src="/src/img/favicon.svg" class="logo" alt="">
                     Oltrie
                 </a>
+                <ul class="nav-menu">  
+                    <li class="nav-item">
+                        <a href="buy.html" class="nav-link">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="rent.html" class="nav-link">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sell.html" class="nav-link">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="home-loans.html" class="nav-link">Home Loans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="agent-finder.html" class="nav-link">Agent Finder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="advertise.html" class="nav-link">Advertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="manage-rentals.html" class="nav-link">Manage Rentals</a>
+                    </li>
+                </ul>
                 <div class="dropdown">
                     <button type="button" class="button button-primary button-sm rounded-circle-sm dropdown-toggle" aria-haspopup="true" aria-expanded="false">M</button>
                     <ul class="dropdown-menu">
                         <li class="dropdown-heading">Account</li>
-                        <li class="dropdown-item"><a href="index.html"><span class="material-symbols-rounded">favorite_border</span> Go to Oltrie</a></li>
-                        <li class="dropdown-item"><hr class="divider"></li>
                         <li class="dropdown-item"><a href="favorites.html"><span class="material-symbols-rounded">favorite_border</span> Saved homes</a></li>
                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">saved_search</span> Saved searches</a></li>
                         <li class="dropdown-item"><a href="recently-viewed.html"><span class="material-symbols-rounded">visibility</span> Recently viewed</a></li>
@@ -50,7 +71,7 @@
                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">help_outline</span> Help Center</a></li>
                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">lock</span> Change Password</a></li>
                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">settings</span> Account Settings</a></li>
-                        <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">logout</span> Logout</a></li>
+                        <li class="dropdown-item"><a href="signin.html"><span class="material-symbols-rounded">logout</span> Logout</a></li>
                     </ul>
                 </div>
             </nav>
@@ -60,7 +81,7 @@
     <main>        
         <section class="section">
             <div class="container">
-                <div class="section-title">Saved homes</div>
+                <div class="section-title">Recently Viewed</div>
                 <div class="display-flex align-items-center justify-content-between">
                     <div class="font-size-16 font-weight-semibold">4 properties</div>
                     <div class="dropdown">
@@ -87,7 +108,7 @@
                 <div class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 mt-2">
                     <div class="col">
                         <div class="card hover-scale-1 h-100">
-                            <a href="#">
+                            <a href="property-single.html">
                                 <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
                             </a>
                             <div class="content">
@@ -98,7 +119,7 @@
                                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">delete</span> Remove this home</a></li>
                                     </ul>
                                 </div>
-                                <a href="#">
+                                <a href="property-single.html">
                                     <div class="font-weight-semibold mb-1">Php 1,500,000</div>
                                     <div class="text-color-medium">92 Allium Place, Orlando FL 32827</div>
                                 </a>
@@ -107,7 +128,7 @@
                     </div>
                     <div class="col">
                         <div class="card hover-scale-1 h-100">
-                            <a href="#">
+                            <a href="property-single.html">
                                 <img src="/src/img/properties/property-2.png" class="card-img" loading="lazy" alt="">
                             </a>
                             <div class="content">
@@ -118,7 +139,7 @@
                                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">delete</span> Remove this home</a></li>
                                     </ul>
                                 </div>
-                                <a href="#">
+                                <a href="property-single.html">
                                     <div class="font-weight-semibold mb-1">Php 900,000</div>
                                     <div class="text-color-medium">4-room apartment with a beautiful terrace</div>
                                 </a>
@@ -127,7 +148,7 @@
                     </div>
                     <div class="col">
                         <div class="card hover-scale-1 h-100">
-                            <a href="#">
+                            <a href="property-single.html">
                                 <img src="/src/img/properties/property-3.png" class="card-img" loading="lazy" alt="">
                             </a>
                             <div class="content">
@@ -138,7 +159,7 @@
                                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">delete</span> Remove this home</a></li>
                                     </ul>
                                 </div>
-                                <a href="#">
+                                <a href="property-single.html">
                                     <div class="font-weight-semibold mb-1">Php 3,000,000</div>
                                     <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
                                 </a>
@@ -147,7 +168,7 @@
                     </div>
                     <div class="col">
                         <div class="card hover-scale-1 h-100">
-                            <a href="#">
+                            <a href="property-single.html">
                                 <img src="/src/img/properties/property-4.png" class="card-img" loading="lazy" alt="">
                             </a>
                             <div class="content">
@@ -158,7 +179,7 @@
                                         <li class="dropdown-item"><a href="#"><span class="material-symbols-rounded">delete</span> Remove this home</a></li>
                                     </ul>
                                 </div>
-                                <a href="#">
+                                <a href="property-single.html">
                                     <div class="font-weight-semibold mb-1">Php 3,000,000</div>
                                     <div class="text-color-medium">3-room apartment with a beautiful terrace</div>
                                 </a>

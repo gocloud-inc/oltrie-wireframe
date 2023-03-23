@@ -1,9 +1,34 @@
+%navMenuToggler {
+    @include breakpoint("lg") {
+        .nav-menu.show {
+            display: block;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            background-color: var(--color-card);
+            width: 20rem;
+            padding: 12px;
+            height: 100vh;
+            z-index: 4;
+
+            .nav-item {
+                margin: 1.5rem 0;
+
+                .nav-link {
+                    color: var(--color-card-contrast);
+                }
+            }
+        }
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 3;
     transition: all 0.4s ease;
+    z-index: 3;
     
     .nav {
         display: flex;
@@ -14,7 +39,7 @@
         #nav-button-toggler {
             display: none;
 
-            @media (max-width: 864px) {
+            @include breakpoint("lg") {
                 display: flex;
             }
         }
@@ -30,12 +55,13 @@
             .logo {
                 width: 3rem;
     
-                @media (max-width: 600px) {
+                @include breakpoint("sm") {
                     width: 2.5rem;
                 }
             }
         }
 
+        @extend %navMenuToggler;
 
         .nav-menu {
             list-style: none;
@@ -45,7 +71,7 @@
             padding: 0;
             margin: 0;
 
-            @media (max-width: 864px) {
+            @include breakpoint("lg") {
                 display: none;
             }
 
@@ -74,10 +100,10 @@
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 3;
     background-color: var(--color-light);
     box-shadow: rgba(var(--color-dark-rgb), 0.1) 0px 4px 6px -1px, rgba(var(--color-dark-rgb), 0.06) 0px 2px 4px -1px;
     transition: all 0.4s ease;
+    z-index: 4;
     
     .nav {
         display: flex;
@@ -88,7 +114,7 @@
         #nav-button-toggler {
             display: none;
 
-            @media (max-width: 864px) {
+            @include breakpoint("lg") {
                 display: flex;
             }
         }
@@ -104,12 +130,13 @@
             .logo {
                 width: 3rem;
     
-                @media (max-width: 600px) {
+                @include breakpoint("sm") {
                     width: 2.5rem;
                 }
             }
         }
 
+        @extend %navMenuToggler;
 
         .nav-menu {
             list-style: none;
@@ -119,7 +146,7 @@
             padding: 0;
             margin: 0;
 
-            @media (max-width: 864px) {
+            @include breakpoint("lg") {
                 display: none;
             }
 
@@ -177,7 +204,7 @@ header.sticky {
     justify-content: center;
     justify-items: center;
 
-    @media (max-width: 768px) {
+    @include breakpoint("md") {
         grid-template-columns: 100%;
     }
     
@@ -185,7 +212,6 @@ header.sticky {
         position: relative;
         background-color: var(--color-card);
         border-radius: 8px;
-        z-index: 1;
         margin-top: -3rem;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         width: 100%;
@@ -198,7 +224,7 @@ header.sticky {
             overflow: hidden;
             text-overflow: ellipsis;
 
-            @media (max-width: 600px) {
+            @include breakpoint("sm") {
                 padding: 1rem 3rem 1rem 0.8rem;
                 font-size: 0.8rem;
             }
@@ -210,7 +236,7 @@ header.sticky {
             right: 0;
             margin: 1.8rem;
 
-            @media (max-width: 600px) {
+            @include breakpoint("sm") {
                 margin: 1.3rem;
             }
         }
@@ -233,6 +259,7 @@ header.sticky {
             overflow-y: auto;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
+            z-index: 1;
             
             .result-menu {
                 list-style: none;
@@ -269,7 +296,6 @@ header.sticky {
         position: relative;
         background-color: var(--color-card);
         border-radius: 8px;
-        z-index: 1;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
         width: 100%;
         padding: 1rem;

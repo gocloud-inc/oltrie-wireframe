@@ -1,9 +1,4 @@
 %containerGutterBreakpoints {
-    @media (max-width: 1400px) {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    } 
-
     @media (max-width: 600px) {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -11,9 +6,5 @@
 }
 
 .container {
-    @extend %containerGutterBreakpoints;
-}
-
-.container-fluid {
     @extend %containerGutterBreakpoints;
 }
