@@ -103,3 +103,53 @@ $padding: 1.2rem;
     }
 }
 
+
+// agent cards
+
+.agent-cards{
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   min-height: 20vh;
+
+   display: flex;
+   justify-content: center;
+    align-items: center;
+   gap:15px;
+    .agent-image{
+        height: 100%;
+        .agent-avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        
+        }
+    }
+    .agent-details{
+    
+        .agent-name{
+            font-size: 17px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+        .agent-rating{
+            display: flex;
+                height: 30px;
+            p{
+                position: relative;
+                top:-14px;
+
+            }
+        }
+       
+    }
+   .agent-contact{
+    display: flex;
+      h4{
+        position: relative;
+        top:-22px;
+        margin-left:5px;
+      }
+   }
+   
+}
+
