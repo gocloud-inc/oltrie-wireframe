@@ -80,3 +80,49 @@
         font-size: 40px;
     }
 }
+
+@include breakpoint("xl"){
+    .agent-table{
+     .agent-list{
+        width: 40vw;
+     }
+
+   .hidden.location{
+            display:none;
+          }
+
+   .review-container{
+    width: 50vw;
+   }
+}
+}
+@include breakpoint("lg"){
+    .agent-table{
+        .hidden.location{
+            display:none;
+          }
+          .agent-list{
+            width: 30vw;
+          }
+    }
+  
+}
+
+@include breakpoint("md"){
+.agent-table{
+    width: 100%;
+    .agent-list-info{
+      .agent-list{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+            
+      }
+     
+    }
+    .hidden{
+        display:none;
+    }
+}
+}
