@@ -6,7 +6,7 @@
     outline: none;
     padding: 12px 14px;
     font-family: var(--font-sans-serif);
-    font-size: 1rem;
+    font-size: 0.9rem;
     background: var(--color-card);
     background-clip: padding-box;
     border: 2px solid rgba(var(--color-dark-rgb), .1);
@@ -53,8 +53,8 @@ textarea {
     gap: 0.7rem;
 
     .form-label {
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: 0.9rem;
+        font-weight: 500;
     }
 
     .input-tag {
