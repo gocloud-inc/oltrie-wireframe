@@ -67,6 +67,9 @@
     --font-sans-serif: 'Inter', sans-serif;
     --font-serif: 'PLayfair Display', serif;
 	--font-base: 1rem;
+
+	// Transitions 
+	--button-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 // $color-mode-type: data;

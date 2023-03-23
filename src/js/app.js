@@ -83,13 +83,21 @@ document.addEventListener('turbo:load', () => {
             searchResultWrapper.classList.toggle('show', shouldShowResults);
         
             if (shouldShowResults) {
-                const searchUrl = `https://api.github.com/search/repositories?q=${searchValue}`;
-                // const headers = new Headers({
-                //     Authorization: 'Bearer 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',
-                // });
-                // const options = { headers };
+                // Set up the API endpoint and credentials
+                const searchApiUrl = `https://dummyjson.com/products/search?q=${searchValue}`;
+                const searchApiToken = 'your_api_token';
+
+                // Set up the API request options
+                const requestOptions = {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + `${searchApiToken}`
+                    }
+                };
                 
-                fetch(searchUrl)
+                // Make the API request to retrieve the requests
+                fetch(searchApiUrl, requestOptions)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
@@ -99,13 +107,13 @@ document.addEventListener('turbo:load', () => {
                     .then(data => {
                         // console.log(data); // log the response from the API to the console
                         // create HTML elements for each search result
-                        const results = data.items.map(item => {
+                        const results = data.products.map(item => {
                             const result = document.createElement('ul');
                             result.classList.add('result-menu');
             
                             result.innerHTML = `
                                 <li class="result-item">
-                                    <a href="${item.html_url}" class="result-link"><span class="material-symbols-rounded">location_on</span> ${item.name} ${item.language}</a>
+                                    <a href="#" class="result-link"><span class="material-symbols-rounded">location_on</span> ${item.title} ${item.brand} ${item.category}</a>
                                 </li>
                             `;
                             return result;
