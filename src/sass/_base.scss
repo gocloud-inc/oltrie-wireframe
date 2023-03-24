@@ -69,16 +69,6 @@ hr {
     color: rgba(var(--color-dark-rgb), 0.8);
 }
 
-.modal-backdrop {
-    background: rgba(var(--color-dark-rgb), .2);
-    backdrop-filter: saturate(180%) blur(15px);
-    -webkit-backdrop-filter: saturate(180%) blur(15px);
-}
-
-.modal-backdrop.show {
-    opacity: unset;
-}
-
 // Overlay
 .overlay {
     position: fixed;
@@ -92,6 +82,19 @@ hr {
 }
 
 // Avatar
+.avatar-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 0.2rem;
+
+    span {
+        font-size: 1.5rem;
+    }
+}
+
 .avatar-md {
     display: flex;
     align-items: center;
@@ -112,3 +115,46 @@ hr {
     border-radius: 50%;
     background-color: var(--color-medium);
 }
+
+// Data Badge
+[data-badge] {
+    position:relative;
+
+    &:after {
+        position: absolute;
+        right: -1px;
+        top: -2px;
+        min-width: 12px;
+        max-width: 30px;
+        min-height: 12px;
+        line-height: 16px;
+        padding: 0 4px;
+        color: var(--color-danger-contrast);
+        background-color: var(--color-danger);
+        font-size: 10px;
+        font-weight: 400;
+        border-radius: 24px;
+        content: attr(data-badge);
+        border: 2px solid var(--color-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }   
+}  
+
+[data-dot-badge] {
+    position:relative;
+    
+    &:after {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 10px;
+        height: 10px;
+        color: var(--color-light);
+        background-color: var(--color-danger);
+        border-radius: 50%;
+        border: 2px solid var(--color-light);
+        content: attr(data-badge);
+    }   
+}  
