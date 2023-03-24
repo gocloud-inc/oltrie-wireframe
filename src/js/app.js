@@ -197,31 +197,33 @@ document.addEventListener('turbo:load', () => {
     const navButtonToggler = document.getElementById('nav-button-toggler');
     const navMenuElement = document.querySelector('.nav-menu');
 
-    navButtonToggler.addEventListener('click', () => {
-        navMenuElement.classList.add('show');
-
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        document.body.appendChild(overlay);
-        document.body.classList.add('overflow-hidden');
-
-        overlay.addEventListener('click', () => {
-            navMenuElement.classList.remove('show');
-            document.body.classList.remove('overflow-hidden');
-            overlay.remove();
-        });
-
-    });
-
-    // Hide Event Handler 
-    document.addEventListener('click', (event) => {
-        const isClickInsideNavMenu = navMenuElement.contains(event.target);
-        const isClickInsideNavButtonToggler = navButtonToggler.contains(event.target);
+    if (navButtonToggler) {
+        navButtonToggler.addEventListener('click', () => {
+            navMenuElement.classList.add('show');
     
-        if (!isClickInsideNavMenu && !isClickInsideNavButtonToggler) {
-            navMenuElement.classList.remove('show');
-        }
-    });
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            document.body.appendChild(overlay);
+            document.body.classList.add('overflow-hidden');
+    
+            overlay.addEventListener('click', () => {
+                navMenuElement.classList.remove('show');
+                document.body.classList.remove('overflow-hidden');
+                overlay.remove();
+            });
+        });
+        
+        // Hide Event Handler 
+        document.addEventListener('click', (event) => {
+            const isClickInsideNavMenu = navMenuElement.contains(event.target);
+            const isClickInsideNavButtonToggler = navButtonToggler.contains(event.target);
+        
+            if (!isClickInsideNavMenu && !isClickInsideNavButtonToggler) {
+                navMenuElement.classList.remove('show');
+            }
+        });
+    }
+
 
     if (searchResultWrapper) {
         document.addEventListener('click', function(event) {
