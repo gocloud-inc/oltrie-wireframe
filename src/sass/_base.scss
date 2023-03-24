@@ -104,3 +104,11 @@ hr {
         font-size: 2.5rem;
     }
 }
+
+// Dot
+.dot {
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 50%;
+    background-color: var(--color-medium);
+}
