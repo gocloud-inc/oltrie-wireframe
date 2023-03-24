@@ -32,7 +32,8 @@
             }
     
             .bread-link[aria-current="page"] {
-                color: var(--color-dark);
+                color: var(--color-primary);
+                font-weight: 500;
             }
         }
     }
