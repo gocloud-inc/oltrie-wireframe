@@ -234,4 +234,19 @@ document.addEventListener('turbo:load', () => {
             }
         });
     }
+
+    const numberInputs = document.querySelectorAll(".form-number");
+
+    if (numberInputs) {
+        numberInputs.forEach(function(input) {
+            input.addEventListener("input", function() {
+                // Remove any non-digit characters
+                const value = this.value.replace(/[^0-9]/g, "");
+                
+                // Add commas to the number
+                this.value = Number(value).toLocaleString();
+            });
+        });
+    }
+
 });
