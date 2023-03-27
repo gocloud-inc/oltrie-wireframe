@@ -32,6 +32,10 @@
     }
 }
 
+input, select {
+    height: 48px;
+}
+
 input[type=date] {
     color: var(--color-dark);
     white-space: nowrap;
@@ -85,7 +89,7 @@ textarea {
             right: 15px;
             z-index: 1;
             color: var(--color-medium);
-            font-size: 0.9rem;
+            font-size: 0.9em;
         }
     }
 

@@ -177,20 +177,20 @@ document.addEventListener('turbo:load', () => {
     });
 
     // Fancy box
-    // const fancyboxGallery = '[data-fancybox="gallery"]';
+    const fancyboxGallery = '[data-fancybox="gallery"]';
     
-    // if (fancyboxGallery) {
-    //     const fancyboxOptions = {
-    //         contentClick: "iterateZoom",
-    //         Images: {
-    //             Panzoom: {
-    //             maxScale: 5,
-    //             },
-    //         },
-    //     };
+    if (fancyboxGallery) {
+        const fancyboxOptions = {
+            contentClick: "iterateZoom",
+            Images: {
+                Panzoom: {
+                maxScale: 5,
+                },
+            },
+        };
 
-    //     Fancybox.bind(fancyboxGallery, fancyboxOptions);
-    // }
+        Fancybox.bind(fancyboxGallery, fancyboxOptions);
+    }
 
 
     // Header Toggler

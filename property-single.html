@@ -88,7 +88,9 @@
                 <div class="row g-4">
                     <div class="col-xl-6 col-lg-6">
                         <div class="property-carousel-container">
-                            <img src="/src/img/properties/property-1.png" class="property-carousel-img" width="100%" loading="lazy" alt="">
+                            <a href="/src/img/properties/property-1.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
+                                <img src="/src/img/properties/property-1.png" class="property-carousel-img" width="100%" loading="lazy" alt="">
+                            </a>
                             <div class="property-carousel-thumbnails">
                                 <a href="/src/img/properties/property-1.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
                                     <img src="/src/img/properties/property-1.png" class="property-carousel-thumb-img" alt="">
@@ -114,7 +116,7 @@
                                     <button type="button" class="button button-tonal-medium rounded-circle dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span class="material-symbols-rounded">more_horiz</span></button>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-item"><a href="#">Get new listings in email</a></li>
-                                        <li class="dropdown-item"><a href="#">View owner dashboard</a></li>
+                                        <li class="dropdown-item"><a href="owner-dashboard.html">View owner dashboard</a></li>
                                         <li class="dropdown-item"><a href="#">Report problem with listing</a></li>
                                     </ul>
                                 </div>
@@ -155,38 +157,88 @@
                             </div>
     
                             <div class="d-flex gap-2 mt-3">
-                                <button type="button" class="button button-primary w-100">Request a tour</button>
+                                <button type="button" class="button button-primary w-100 gap-2"><span class="material-symbols-rounded">tour</span> Request a tour</button>
                                 <button type="button" class="button button-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#askQuestionModal">Ask a question</button>
+                            </div>
+
+                            <div class="d-xl-flex justify-content-between gap-4 mt-3 text-color-medium background-tonal-medium p-4 rounded-4">
+                                <div class="font-size-14 d-flex align-items-center gap-2"><span class="material-symbols-rounded">schedule</span> <b>4 days</b> on Oltrie</div>
+                                <div class="font-size-14 d-flex align-items-center gap-2"><span class="material-symbols-rounded">visibility</span> <b>9,345</b> views</div>
+                                <div class="font-size-14 d-flex align-items-center gap-2"><span class="material-symbols-rounded">favorite</span> <b>443</b> saves</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tab-container">
-                    <div class="tab-buttons" role="tablist">
-                        <button class="tab-button active" data-tab="tab1" role="tab" aria-selected="true">Overview</button>
-                        <button class="tab-button" data-tab="tab2" role="tab" aria-selected="false">Facts and features</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Home value</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Price and tax history</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Monthly cost</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Rental value</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Landmarks</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Neighborhood</button>
-                        <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Local legal protection</button>
-                    </div>
-                    <div class="tab-content">
-                        <div class="tab-panel active" data-tab="tab1" role="tabpanel" aria-labelledby="" tabindex="0">
-                            <p>Very private, secluded Eagle River home on large 1.36 acre lot located near the Nature Center. Wall of windows in vaulted open living/kitchen area provides tons of light and is perfect for entertaining. Huge recreational room on lower level. Do not miss out on this great opportunity for sweat equity or investment! Please make an appointment with a Real Estate Agent/Broker of your choice to view.</p>
-                        </div>
-                        <div class="tab-panel" data-tab="tab2" role="tabpanel" aria-labelledby="" tabindex="0">
-                            <p>This is the content of tab 2.</p>
-                        </div>
-                        <div class="tab-panel" data-tab="tab3" role="tabpanel" aria-labelledby="" tabindex="0">
-                            <p>This is the content of tab 3.</p>
+                <div class="row g-4">
+                    <div class="col-xl-12">
+                        <div class="tab-container">
+                            <div class="tab-buttons" role="tablist">
+                                <button class="tab-button active" data-tab="tab1" role="tab" aria-selected="true">Overview</button>
+                                <button class="tab-button" data-tab="tab2" role="tab" aria-selected="false">Amenities</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Home value</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Price and tax history</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Monthly cost</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Rental value</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Landmarks</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Neighborhood</button>
+                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Local legal protection</button>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-panel active" data-tab="tab1" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-18 font-weight-medium mb-2">Parkway Corporate Center, Office Unit for Sale (36 sq.m.) in Alabang</div>
+                                        <ul class="px-3 d-grid gap-3">
+                                            <li>Floor Finish: Bare concrete, depressed by 50mm</li>
+                                            <li>AC System: Variable Refrigerant Flow</li>
+                                            <li>Parking ratio: 1 slot/unit</li>
+                                            <li>Bare shell w/ rough flooring</li>
+                                            <li>With glass main door</li>
+                                        </ul>
+
+                                        <div class="font-size-18 font-weight-medium pt-3">Unparalleled Lifestyle and Work Experience</div>
+                                        <p>Nestled in Filinvest City, an all-in-one premier business district, garden city, mod metropolis and convergence hub; thrive in a work setting custom made for business that aims for optimum performance and immediate sustainability.</p>
+
+                                        <div class="font-size-18 font-weight-medium pt-3">Perfect Balance of Nature and Industry</div>
+                                        <p>The hustle and bustle of a successful corporate life is eased by ample open spaces lined with lush greenery and sophisticated architecture that impresses in both form and function.</p>
+
+                                        <div class="font-size-18 font-weight-medium pt-3">The Units</div>
+                                        <ul class="px-3 d-grid gap-3">
+                                            <li>Parkway Corporate Center offers office units with an average usable office area of 36 sq.m.</li>
+                                            <li>All units are combinable, with flexible unit layouts and deliverables to fit any business.</li>
+                                            <li>Common toilet are provided in each floor. Selected units have provissions for executive toilet.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab2" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Amenities</div>
+                                        <ul class="p-0 d-grid gap-3">
+                                            <li class="d-flex align-items-center gap-2">
+                                                <span class="material-icons-round text-color-danger">sell</span> For Sale
+                                            </li>
+                                            <li class="d-flex align-items-center gap-2">
+                                                <span class="material-icons-two-tone">place</span> 1840 Mount Yukla Cir, Eagle River, AK 99577
+                                            </li>
+                                            <li class="d-flex align-items-center gap-2">
+                                                <span class="material-icons-two-tone">bed</span> 6 bedroom
+                                            </li>
+                                            <li class="d-flex align-items-center gap-2">
+                                                <span class="material-icons-two-tone">bathroom</span> 4 bathroom
+                                            </li>
+                                            <li class="d-flex align-items-center gap-2">
+                                                <span class="material-icons-two-tone">crop</span> 3,797 sqft
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab3" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <p>This is the content of tab 3.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </section>
 

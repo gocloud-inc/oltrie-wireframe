@@ -82,23 +82,86 @@
         <section class="py-4">
             <div class="container">
                 <div class="section-title">Rental Listings</div>
-                <form action="" class="property-filter py-1">
-                    <div class="property-search">
-                        <input type="search" class="form-control" placeholder="Address, neighborhood, city, or zipcode">
-                        <select class="form-control">
-                            <option value="For Sale">For Sale</option>
-                            <option value="For Sale">For Rent</option>
-                        </select>
-                        <select class="form-control">
-                            <option value="Houses">Houses</option>
-                            <option value="Townhomes">Townhomes</option>
-                            <option value="Multi-family">Multi-family</option>
-                            <option value="Condos-Co-ops">Condos-Co-ops</option>
-                            <option value="Lots/Land">Lots/Land</option>
-                            <option value="Apartments">Apartments</option>
-                            <option value="Manufactured">Manufactured</option>
-                        </select>
-                        <button type="button" class="button button-primary">Save search</button>
+                <form action="" class="background-card shadow-sm p-4 rounded-4 mb-3">
+                    <div class="row g-3">
+                        <div class="col-xl-2">
+                            <div class="form-group">
+                                <label for="label" class="form-label">Offer Type</label>
+                                <select class="form-control">
+                                    <option value="For Sale">For Sale</option>
+                                    <option value="For Sale">For Rent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="form-group">
+                                <label for="label" class="form-label">Property Type</label>
+                                <select class="form-control">
+                                    <option value="Houses">Houses</option>
+                                    <option value="Townhomes">Townhomes</option>
+                                    <option value="Multi-family">Multi-family</option>
+                                    <option value="Condos-Co-ops">Condos-Co-ops</option>
+                                    <option value="Lots/Land">Lots/Land</option>
+                                    <option value="Apartments">Apartments</option>
+                                    <option value="Manufactured">Manufactured</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="form-group">
+                                <label for="label" class="form-label">Location</label>
+                                <div class="input-tag">
+                                    <span class="material-symbols-rounded input-icon-start">location_on</span>
+                                    <input type="search" class="form-control" placeholder="Address, neighborhood, city, or zipcode">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="form-group">
+                                <label for="label" class="form-label">Price</label>
+                                <div class="input-tag">
+                                    <span class="input-icon-start">&#8369;</span>
+                                    <select class="form-control" required>
+                                        <option disabled selected>Any Price</option>
+                                        <option value="Below 2.5 M">Below 2.5M</option>
+                                        <option value="2.5M - 5M">2.5M - 5M</option>
+                                        <option value="5M - 7.5M">5M - 7.5M</option>
+                                        <option value="7.5M - 10M">7.5M - 10M</option>
+                                        <option value="10M - 15M">10M - 15M</option>
+                                        <option value="15M and 20M">15M and 20M</option>
+                                        <option value="20M and 30M">20M and 30M</option>
+                                        <option value="30M and above">30M and above</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2">
+                            <div class="form-group">
+                                <label for="label" class="form-label">Bedrooms</label>
+                                <div class="input-tag">
+                                    <span class="material-symbols-rounded input-icon-start">bed</span>
+                                    <select class="form-control" required>
+                                        <option disabled selected>Please select</option>
+                                        <option value="Studio">Studio</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <button type="button" class="button button-primary float-end"><span class="material-symbols-rounded">search</span> Save Search</button>
+                        </div>
                     </div>
                 </form>
                 

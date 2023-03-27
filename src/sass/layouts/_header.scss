@@ -171,6 +171,22 @@
                 }
             }
         }
+
+        .tab-bar {
+            .tab-bar-button {
+                &:hover {
+                    background-color: rgba(var(--color-dark-rgb), 0.1);
+                }
+                
+                span {
+                    color: var(--color-dark);
+        
+                    @include breakpoint("lg") {
+                        color: rgba(var(--color-dark-rgb), 0.8) !important;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -245,16 +261,12 @@ header.sticky {
             position: absolute;
             top: 0;
             right: 0;
-            margin: 1.8rem;
-
-            @include breakpoint("sm") {
-                margin: 1.3rem;
-            }
+            margin: 1.48rem;
         }
 
         .property-search-result {
             position: absolute;
-            top: 80px;
+            top: 55px;
             left: 0;
             right: 0;
             bottom: 0;
@@ -322,6 +334,7 @@ header.sticky {
     align-items: center;
     gap: 1rem;
 
+    
     @include breakpoint("lg") {
         position: fixed;
         bottom: 30px;
@@ -330,14 +343,14 @@ header.sticky {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 55px;
-        background-color: var(--color-card);
+        height:60px;
         z-index: 3;
         width: fit-content;
         border: 1px solid rgba(var(--color-dark-rgb), 0.05);
-        border-radius: 24px;
+        border-radius: 36px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-        padding: 0.5rem;
+        padding: 0.8rem;
+        @include backdrop-blur(card);
     }
 
     .tab-bar-button {
