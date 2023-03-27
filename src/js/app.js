@@ -235,6 +235,7 @@ document.addEventListener('turbo:load', () => {
         });
     }
 
+    // Adding commas to the number input. 
     const numberInputs = document.querySelectorAll(".form-number");
 
     if (numberInputs) {
