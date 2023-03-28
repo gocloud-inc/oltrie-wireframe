@@ -144,7 +144,7 @@ textarea {
 
 
 // Error Handling
-.form-invalid {
+.is-invalid {
     border-color: rgba(var(--color-danger-rgb), 0.7);
     
     &:hover, &:focus {

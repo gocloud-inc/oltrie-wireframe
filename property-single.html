@@ -85,7 +85,26 @@
     <main>
         <section class="py-4">
             <div class="container">
-                <div class="row g-4">
+                <div class="bread">
+                    <ol class="bread-menu">
+                        <li class="bread-item">
+                            <a href="index.html" class="bread-link">Home</a>
+                        </li>
+                        <li class="bread-item">
+                            <a href="rent.html" class="bread-link">Bulacan</a>
+                        </li>
+                        <li class="bread-item">
+                            <a href="rent.html" class="bread-link">Pulilan</a>
+                        </li>
+                        <li class="bread-item">
+                            <a href="rent.html" class="bread-link">Tibag</a>
+                        </li>
+                        <li class="bread-item">
+                            <span class="bread-link" aria-current="page">Country side house and lot just 45 minutes from Manila via NLEX</span>
+                        </li>
+                    </ol>
+                </div>
+                <div class="row g-4 mt-2">
                     <div class="col-xl-6 col-lg-6">
                         <div class="property-carousel-container">
                             <a href="/src/img/properties/property-1.png" data-fancybox="gallery" data-caption="1840 Mount Yukla Cir, Eagle River, AK 99577">
@@ -506,7 +525,10 @@
                             <div class="col-xl-12">
                                 <div class="form-group">
                                     <label for="label" class="form-label">Phone</label>
-                                    <input type="text" class="form-control" required>
+                                    <div class="input-tag">
+                                        <span class="input-icon-start font-size-14 font-weight-medium text-color-dark">+63</span>
+                                        <input type="text" class="form-control form-mobile-number" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-12">

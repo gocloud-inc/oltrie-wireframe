@@ -2,8 +2,38 @@ import * as Turbo from "@hotwired/turbo";
 import { Modal } from 'bootstrap';
 
 document.addEventListener('turbo:load', () => {
+   // Define a function to format phone numbers
+    function formatPhoneNumber(phoneNumber) {
+        // Remove all non-digit characters from the input value
+        phoneNumber = phoneNumber.replace(/\D/g, '');
+
+        // Replace the first digit with 9 if it's between 0 and 8
+        phoneNumber = phoneNumber.replace(/^([0-8])(\d{2})/, '9$2');
+    
+        // If the phone number is longer than 11 characters, truncate it
+        if (phoneNumber.length > 10) {
+        phoneNumber = phoneNumber.slice(0, 10);
+        }
+    
+        // Format the phone number as 917-123-4567
+        phoneNumber = phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+    
+        return phoneNumber;
+    }
+    
+    // Get all input fields with the form-mobile-number class
+    const inputFields = document.querySelectorAll('.form-mobile-number');
+    
+    // Loop through each input field and attach an input event listener
+    inputFields.forEach(function(inputField) {
+        inputField.addEventListener('input', function(event) {
+        // Format the phone number and assign it back to the input value
+        const phoneNumber = formatPhoneNumber(event.target.value);
+        event.target.value = phoneNumber;
+        });
+    });
+
     // Sticky Header
-    // Get the header element
     let header = document.querySelector(".header");
 
     if (header) {
@@ -249,5 +279,4 @@ document.addEventListener('turbo:load', () => {
             });
         });
     }
-
 });
