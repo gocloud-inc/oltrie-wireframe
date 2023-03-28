@@ -28,6 +28,8 @@
     }
 
     .tab-content {
+        width: 100%;
+        
         .tab-panel {
             opacity: 0;
             transition: all 0.3s ease;
