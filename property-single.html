@@ -189,19 +189,19 @@
                     </div>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-xl-12">
+                <div class="row g-5 mt-4">
+                    <div class="col-xl-8">
                         <div class="tab-container">
                             <div class="tab-buttons" role="tablist">
                                 <button class="tab-button active" data-tab="tab1" role="tab" aria-selected="true">Overview</button>
                                 <button class="tab-button" data-tab="tab2" role="tab" aria-selected="false">Amenities</button>
                                 <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Home value</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Price and tax history</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Monthly cost</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Rental value</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Landmarks</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Neighborhood</button>
-                                <button class="tab-button" data-tab="tab3" role="tab" aria-selected="false">Local legal protection</button>
+                                <button class="tab-button" data-tab="tab4" role="tab" aria-selected="false">Price and tax history</button>
+                                <button class="tab-button" data-tab="tab5" role="tab" aria-selected="false">Monthly cost</button>
+                                <button class="tab-button" data-tab="tab6" role="tab" aria-selected="false">Rental value</button>
+                                <button class="tab-button" data-tab="tab7" role="tab" aria-selected="false">Landmarks</button>
+                                <button class="tab-button" data-tab="tab8" role="tab" aria-selected="false">Neighborhood</button>
+                                <button class="tab-button" data-tab="tab9" role="tab" aria-selected="false">Local legal protection</button>
                             </div>
                             <div class="tab-content">
                                 <div class="tab-panel active" data-tab="tab1" role="tabpanel" aria-labelledby="" tabindex="0">
@@ -252,8 +252,171 @@
                                     </div>
                                 </div>
                                 <div class="tab-panel" data-tab="tab3" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <p>This is the content of tab 3.</p>
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Home Value</div>
+                                    </div>
                                 </div>
+                                <div class="tab-panel" data-tab="tab4" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Price and Tax History</div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab5" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="row g-4">
+                                        <div class="col-xl-12">
+                                            <div class="font-size-24 font-weight-semibold">Calculate your monthly payment</div>
+                                            <p>Estimate how much you'll pay each month for your new home with our easy-to-use mortgage calculator.</p>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <form id="mortgageForm">
+                                                <div class="row g-3">
+                                                    <div class="col-xl-12">
+                                                        <div class="form-group">
+                                                            <label for="label" class="form-label">Loan Amount</label>
+                                                            <div class="input-tag">
+                                                                <span class="input-icon-start">&#8369;</span>
+                                                                <input type="text" id="loanAmount" class="form-control form-number" placeholder="0.00" value="2000000" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="form-group">
+                                                            <label for="label" class="form-label">Loan Term</label>
+                                                            <div class="input-tag">
+                                                                <input type="text" id="loanTerm" class="form-control form-number px-4" placeholder="0" value="20" required>
+                                                                <span class="input-icon-end">year(s)</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="form-group">
+                                                            <label for="label" class="form-label">Annual Interest Rate</label>
+                                                            <div class="input-tag">
+                                                                <input type="text" id="interestRate" class="form-control form-number px-4" placeholder="0.0" value="6" required>
+                                                                <span class="input-icon-end">%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="form-group">
+                                                            <label for="label" class="form-label">Annual Property Tax</label>
+                                                            <div class="input-tag">
+                                                                <span class="input-icon-start">&#8369;</span>
+                                                                <input type="text" id="propertyTax" class="form-control" placeholder="0.0" value="1000" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="form-group">
+                                                            <label for="label" class="form-label">Annual Insurance</label>
+                                                            <div class="input-tag">
+                                                                <span class="input-icon-start">&#8369;</span>
+                                                                <input type="text" id="insurance" class="form-control" placeholder="0.0" value="300" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12">
+                                                        <div class="d-flex gap-2">
+                                                            <button type="submit" class="button button-primary w-100">Calculate</button>
+                                                            <button type="button" class="button button-tonal-primary font-weight-semibold w-100" data-bs-toggle="modal" data-bs-target="#calculatorDisclaimerModal">Calculator Disclaimer</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="background-tonal-primary rounded-4 py-4 px-4 d-grid justify-items-center text-center shadow-sm">
+                                                <div class="avatar-sm rounded-5 background-primary d-flex align-items-center justify-content-center mb-2">
+                                                    <span class="material-symbols-rounded text-color-light font-size-32">house</span>
+                                                </div>
+                                                <div class="font-size-26 font-weight-semibold" id="totalPayment">Php 5,317</div>
+                                                <div class="font-size-18">Total Monthly Payment</div>
+                                                <div class="font-size-12">(Does not reflect current interest rates)</div>
+
+                                                <div class="font-size-18 font-weight-semibold mt-3" id="monthlyTax">Php 0.00</div>
+                                                <div class="font-size-14">Monthly Property Tax</div>
+
+                                                <div class="font-size-18 font-weight-semibold mt-3" id="monthlyInsurance">Php 0.00</div>
+                                                <div class="font-size-14">Monthly Insurance</div>
+
+                                                <div class="font-size-18 font-weight-semibold mt-3" id="monthlyPayment">Php 0.00</div>
+                                                <div class="font-size-14">Monthly Payment</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab6" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-12">
+                                            <div class="background-tonal-primary rounded-4 py-4 px-4 d-grid justify-items-center text-center shadow-sm">
+                                                <div class="avatar-sm rounded-5 background-primary d-flex align-items-center justify-content-center mb-2">
+                                                    <span class="material-symbols-rounded text-color-light font-size-32">house</span>
+                                                </div>
+                                                <div class="font-size-26 font-weight-semibold" id="totalPayment">Php 5,317 / month</div>
+                                                <div class="font-size-18">Rental Value</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab7" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Landmarks</div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab8" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Neighborhood</div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" data-tab="tab9" role="tabpanel" aria-labelledby="" tabindex="0">
+                                    <div class="background-tonal-medium p-4 rounded-4">
+                                        <div class="font-size-24 font-weight-medium mb-2">Legal Local Protection</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="card position-sticky-top">
+                            <div class="content">
+                                <form action="">
+                                    <div class="row g-3">
+                                        <div class="col-xl-12">
+                                            <div class="modal-title">Ask a question</div>
+                                            <span class="modal-text">Chat with a local partner agent to get questions answered, tour and more.</span>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="label" class="form-label">Name</label>
+                                                <input type="text" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="label" class="form-label">Phone</label>
+                                                <div class="input-tag">
+                                                    <span class="input-icon-start font-size-14 font-weight-medium text-color-dark">+63</span>
+                                                    <input type="text" class="form-control form-mobile-number" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="label" class="form-label">Email</label>
+                                                <input type="email" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="label" class="form-label">Message</label>
+                                                <textarea class="form-control" cols="30" rows="3" required>I am interested in 1840 Mount Yukla Cir, Eagle River, AK 99577.</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <button type="submit" class="button button-primary w-100" data-bs-dismiss="modal">Contact agent</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -549,6 +712,25 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Disclaimer Modal -->
+    <div class="modal fade" id="calculatorDisclaimerModal" tabindex="-1" aria-labelledby="calculatorDisclaimerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <button type="button" class="button button-tonal-medium rounded-circle position-absolute top-0 right-0 m-2" data-bs-dismiss="modal">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                    <div class="row g-4">
+                        <div class="col-xl-12">
+                            <div class="modal-title mb-2">Calculator Disclaimer</div>
+                            <span class="font-size-16">The mortgage calculator is intended to be used for educational purposes only. Actual available rates and monthly payment amounts are subject to market fluctuations and will depend on a number of factors, including geography and loan characteristics. The estimates are based on information you provide, and may not include other fees and costs that a lender may assess in addition to monthly principal and interest, such as taxes and insurance and the actual payment obligation may be greater. Oltrie does not make loans and this is not a commitment to lend.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

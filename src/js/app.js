@@ -2,6 +2,51 @@ import * as Turbo from "@hotwired/turbo";
 import { Modal } from 'bootstrap';
 
 document.addEventListener('turbo:load', () => {
+
+    // Nortgage Calculator
+    const mortgageForm = document.getElementById('mortgageForm');
+    const monthlyPaymentElement = document.getElementById('monthlyPayment');
+    const monthlyTaxElement = document.getElementById('monthlyTax');
+    const monthlyInsuranceElement = document.getElementById('monthlyInsurance');
+    const totalPaymentElement = document.getElementById('totalPayment');
+
+    if (mortgageForm) {
+        mortgageForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const loanAmountInput = document.querySelector('#loanAmount');
+            const loanAmount = parseInt(loanAmountInput.value.replaceAll(',', '')); // Remove commas from input
+            loanAmountInput.value = loanAmount.toLocaleString(); // Format input with commas
+    
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const loanTerm = parseInt(document.getElementById('loanTerm').value) * 12;
+            const propertyTax = parseInt(document.querySelector('#propertyTax').value.replaceAll(',', ''));
+            const insurance = parseInt(document.querySelector('#insurance').value.replaceAll(',', ''));
+    
+            // The formula used to calculate the monthly mortgage payment in the code I provided is:
+            // M = P [ i(1 + i)^n ] / [ (1 + i)^n – 1] + (T + I) / 12
+    
+            // Whre:
+            // M = Monthly Mortgage Payment
+            // P = Loan Amount
+            // i = Interest Rate (Monthly)
+            // n = Loan Term in Months
+            // T = Annual Property Tax
+            // I = Annual Insurance
+    
+            // The formula calculates the amount of the monthly mortgage payment based on the loan amount, interest rate, and loan term in months, plus the annual property tax and insurance divided by 12 to get their monthly equivalent.
+            const monthlyPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1);
+            const monthlyTax = propertyTax / 12;
+            const monthlyInsurance = insurance / 12;
+            const totalPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm)) / (Math.pow(1 + interestRate, loanTerm) - 1) + (propertyTax + insurance) / 12; // or monthlyPayment * loanTerm + propertyTax + insurance; to get the totality
+    
+            monthlyPaymentElement.textContent = `Php ${monthlyPayment.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+            monthlyTaxElement.textContent = `Php ${monthlyTax.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+            monthlyInsuranceElement.textContent = `Php ${monthlyInsurance.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+            totalPaymentElement.textContent = `Php ${totalPayment.toLocaleString(undefined, {maximumFractionDigits: 2})}`;
+        });
+    }
+
    // Define a function to format phone numbers
     function formatPhoneNumber(phoneNumber) {
         // Remove all non-digit characters from the input value
