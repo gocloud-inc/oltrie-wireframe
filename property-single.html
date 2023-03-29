@@ -176,7 +176,7 @@
                             </div>
     
                             <div class="d-flex gap-2 mt-3">
-                                <button type="button" class="button button-primary w-100 gap-2"><span class="material-symbols-rounded">tour</span> Request a tour</button>
+                                <button type="button" class="button button-primary w-100 gap-2" data-bs-toggle="modal" data-bs-target="#requestTourModal"><span class="material-symbols-rounded">tour</span> Request a tour</button>
                                 <button type="button" class="button button-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#askQuestionModal">Ask a question</button>
                             </div>
 
@@ -201,7 +201,6 @@
                                 <button class="tab-button" data-tab="tab6" role="tab" aria-selected="false">Rental value</button>
                                 <button class="tab-button" data-tab="tab7" role="tab" aria-selected="false">Landmarks</button>
                                 <button class="tab-button" data-tab="tab8" role="tab" aria-selected="false">Neighborhood</button>
-                                <button class="tab-button" data-tab="tab9" role="tab" aria-selected="false">Local legal protection</button>
                             </div>
                             <div class="tab-content">
                                 <div class="tab-panel active" data-tab="tab1" role="tabpanel" aria-labelledby="" tabindex="0">
@@ -252,8 +251,16 @@
                                     </div>
                                 </div>
                                 <div class="tab-panel" data-tab="tab3" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <div class="background-tonal-medium p-4 rounded-4">
-                                        <div class="font-size-24 font-weight-medium mb-2">Home Value</div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-xl-12">
+                                            <div class="background-tonal-primary rounded-4 py-4 px-4 d-grid justify-items-center text-center shadow-sm">
+                                                <div class="avatar-sm rounded-5 background-primary d-flex align-items-center justify-content-center mb-2">
+                                                    <span class="material-symbols-rounded text-color-light font-size-32">house</span>
+                                                </div>
+                                                <div class="font-size-26 font-weight-semibold" id="totalPayment">Php 3,456,317</div>
+                                                <div class="font-size-18">Home Value</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-panel" data-tab="tab4" role="tabpanel" aria-labelledby="" tabindex="0">
@@ -359,18 +366,89 @@
                                     </div>
                                 </div>
                                 <div class="tab-panel" data-tab="tab7" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <div class="background-tonal-medium p-4 rounded-4">
-                                        <div class="font-size-24 font-weight-medium mb-2">Landmarks</div>
+                                    <div class="mb-3">
+                                        <div class="font-size-24 font-weight-medium">Nearby Landmarks</div>
+                                        <div class="font-size-14 font-weight-medium text-color-medium">Results: 8</div>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-xl-5">
+                                            <div class="d-grid gap-2 overflow-auto h-75">
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Jose Rizal University</div>
+                                                        <div class="font-size-12 text-color-medium">1.82 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Concordia College</div>
+                                                        <div class="font-size-12 text-color-medium">1.38 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Don Bosco Technical College</div>
+                                                        <div class="font-size-12 text-color-medium">1.4 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Saint Francis High School</div>
+                                                        <div class="font-size-12 text-color-medium">0.11 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Trinity Hospital</div>
+                                                        <div class="font-size-12 text-color-medium">0.31 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Santa Ana Hospital</div>
+                                                        <div class="font-size-12 text-color-medium">0.17 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" class="background-card border p-2 d-flex align-items-center gap-3 rounded-4">
+                                                    <div class="content-icon background-tonal-primary rounded-xl">
+                                                        <span class="material-symbols-rounded">home_pin</span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-size-14 font-weight-semibold">Buhay Mahalaga Health Center</div>
+                                                        <div class="font-size-12 text-color-medium">1.1 km Santa Ana, Manila</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-7">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43625.71261629129!2d120.8376300743655!3d14.881000421401206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339653639b8bd719%3A0x58be284b54529569!2sRocka%20Village%202%20Phase%204%2C%205%2C%20and%206%20Multi%20Purpose%20Hall!5e0!3m2!1sen!2sus!4v1680057365981!5m2!1sen!2sus" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="tab-panel" data-tab="tab8" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <div class="background-tonal-medium p-4 rounded-4">
-                                        <div class="font-size-24 font-weight-medium mb-2">Neighborhood</div>
-                                    </div>
-                                </div>
-                                <div class="tab-panel" data-tab="tab9" role="tabpanel" aria-labelledby="" tabindex="0">
-                                    <div class="background-tonal-medium p-4 rounded-4">
-                                        <div class="font-size-24 font-weight-medium mb-2">Legal Local Protection</div>
+                                    <div class="font-size-24 font-weight-medium mb-2">Neighborhood: Blossom Valley</div>
+                                    <div class="row g-3">
+                                        <div class="col-xl-12">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43625.71261629129!2d120.8376300743655!3d14.881000421401206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339653639b8bd719%3A0x58be284b54529569!2sRocka%20Village%202%20Phase%204%2C%205%2C%20and%206%20Multi%20Purpose%20Hall!5e0!3m2!1sen!2sus!4v1680057365981!5m2!1sen!2sus" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -417,6 +495,202 @@
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-5">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between gap-2">
+                    <div class="font-size-24 font-weight-semibold">Similar homes</div>
+                    <a href="rent.html" class="text-color-primary font-weight-semibold d-flex align-items-center gap-2">See all <span class="material-icons-round">chevron_right</span></a>
+                </div>
+
+                <div class="row row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 mt-1">
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 1,500,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-2.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 900,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-3.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-4.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-1.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 1,500,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-2.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 900,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-3.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card hover-scale-1 h-100">
+                            <a href="property-single.html">
+                                <img src="/src/img/properties/property-4.png" class="card-img" loading="lazy" alt="">
+                            </a>
+                            <div class="content">
+                                <button type="button" class="button button-light rounded-circle position-absolute top-0 right-0 m-1">
+                                    <span class="material-symbols-rounded">favorite_border</span>
+                                </button>
+                                <a href="property-single.html">
+                                    <div class="font-weight-semibold mb-1">Php 3,000,000</div>
+                                    <div class="font-size-14 text-color-medium">5560 Lexington Ave, San Jose, CA 95123</div>
+                                    <div class="d-flex align-items-center gap-2 mt-2 text-color-primary">
+                                        <span class="font-size-14 font-weight-medium">2 bd</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">1 ba</span>
+                                        <span class="dot"></span>
+                                        <span class="font-size-14 font-weight-medium">708 sqft</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -664,6 +938,109 @@
 			</div>
 		</div>
 	</footer>
+
+    <!-- Request Tour modal -->
+    <div class="modal fade" id="requestTourModal" tabindex="-1" aria-labelledby="requestTourModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-body p-4">
+                        <button type="button" class="button button-tonal-medium rounded-circle position-absolute top-0 right-0 m-2" data-bs-dismiss="modal">
+                            <span class="material-symbols-rounded">close</span>
+                        </button>
+                        <div class="row g-4">
+                            <div class="col-xl-12">
+                                <div class="modal-title">Tour with a Buyer's Agent</div>
+                                <span class="modal-text">Chat with a local partner agent to get questions answered, tour and more.</span>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">I want to tour</label>
+                                    <select class="form-control" required>
+                                        <option value="In Person">In Person</option>
+                                        <option value="Video Chat">Video Chat</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Select preferred date</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Select preferred time</label>
+                                    <select class="form-control" required>
+                                        <option value="7:00 am">7:00 am</option>
+                                        <option value="8:00 am">8:00 am</option>
+                                        <option value="9:00 am">9:00 am</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <button type="button" class="button button-primary w-100" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#requestVisitModal">Request this time</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request Visit modal -->
+    <div class="modal fade" id="requestVisitModal" tabindex="-1" aria-labelledby="requestVisitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-body p-4">
+                        <button type="button" class="button button-tonal-medium rounded-circle position-absolute top-0 right-0 m-2" data-bs-dismiss="modal">
+                            <span class="material-symbols-rounded">close</span>
+                        </button>
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <div class="modal-title">Wednesday, March 29 at 11:00 am</div>
+                                <span class="modal-text">Your requesting tour via In Person</span>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Phone</label>
+                                    <div class="input-tag">
+                                        <span class="input-icon-start font-size-14 font-weight-medium text-color-dark">+63</span>
+                                        <input type="text" class="form-control form-mobile-number" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form-group">
+                                    <label for="label" class="form-label">Message</label>
+                                    <textarea class="form-control" cols="30" rows="3" required>I am interested in 1840 Mount Yukla Cir, Eagle River, AK 99577.</textarea>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <button type="button" class="button button-tonal-primary w-100" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#requestTourModal"><span class="material-symbols-rounded">edit</span> Edit</button>
+                            </div>
+                            <div class="col-xl-6">
+                                <button type="submit" class="button button-primary w-100">Request visit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Ask a question modal -->
     <div class="modal fade" id="askQuestionModal" tabindex="-1" aria-labelledby="askQuestionModalLabel" aria-hidden="true">
