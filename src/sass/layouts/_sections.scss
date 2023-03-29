@@ -158,6 +158,10 @@
             height: 6rem;
             object-fit: cover;
             border-radius: 12px;
+
+            @include breakpoint("sm") {
+                height: 4rem;
+            }
         }
     }
 }

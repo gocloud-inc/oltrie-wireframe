@@ -34,10 +34,10 @@
 
 // Configuration 
 @import "variables";
+@import "mixins";
 @import "base";
 @import "breadcrumbs";
 @import "container";
-@import "mixins";
 
 // Utilities
 @import "utilities/border-radius";
